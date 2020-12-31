@@ -69,30 +69,30 @@
 
 	<form id="modifyForm" method="POST">
 		
-		<input type="hidden" name="num" value="${ freeBoardDto.num }"/>
+		<input type="hidden" name="num" value="${ freeBoardDto.NUM }"/>
 		<table border="1">
 			<tbody>
 				<tr>
 					<td style="width: 150px;" align="center">타입 :</td>
 					<td style="width: 400px;">
 						<select id="codeTypeSelect" name="codeType">
-							<option value="01" <c:if test="${ freeBoardDto.codeType eq '01'}">selected</c:if>>자유</option>
-							<option value="02" <c:if test="${ freeBoardDto.codeType eq '02' }">selected</c:if>>익명</option>
-							<option value="03" <c:if test="${ freeBoardDto.codeType eq '03' }">selected</c:if>>QnA</option>
+							<c:forEach var="nRow" items="${ writeTypeCodeList }">
+								<option value="${ nRow.DECODE }" <c:if test="${ freeBoardDto.CODETYPE eq nRow.DECODE }">selected</c:if>>${ nRow.DECODE_NAME }</option>
+							</c:forEach>
 						</select>
 					</td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">이름 :</td>
-					<td style="width: 400px;"><input type="text" name="name" value="${ freeBoardDto.name }" readonly/></td>
+					<td style="width: 400px;"><input type="text" name="name" value="${ freeBoardDto.NAME }" readonly/></td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">제목 :</td>
-					<td style="width: 400px;"><input type="text" id="title" name="title" value="${ freeBoardDto.title }"/></td>
+					<td style="width: 400px;"><input type="text" id="title" name="title" value="${ freeBoardDto.TITLE }"/></td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">내용 :</td>
-					<td style="width: 400px;"><textarea id="content" name="content" rows="25" cols="65" >${ freeBoardDto.content }</textarea></td>
+					<td style="width: 400px;"><textarea id="content" name="content" rows="25" cols="65" >${ freeBoardDto.CONTENT }</textarea></td>
 				</tr>
 			</tbody>
 			<tfoot>

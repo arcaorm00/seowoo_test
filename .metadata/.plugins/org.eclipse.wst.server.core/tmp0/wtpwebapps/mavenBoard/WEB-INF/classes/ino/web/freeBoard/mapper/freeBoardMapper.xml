@@ -13,10 +13,10 @@
 		 		NUM, NAME, TITLE, CONTENT, TO_CHAR(REGDATE , 'YYYY/MM/DD') AS REGDATE 
 				FROM 
 				FREEBOARD
-				<if test="searchField != null and !searchField.equals('') and searchField.equals('num')">
+				<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM001')">
 					WHERE NUM = #{keyword}
 				</if>
-				<if test="searchField != null and !searchField.equals('') and searchField.equals('title')">
+				<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM002')">
 					WHERE TITLE like '%'||#{keyword}||'%'
 				</if>
 			) PAGE_BOARD
@@ -62,10 +62,10 @@
 
 	<select id="freeBoardGetTotalCnt" resultType="int">
 		SELECT COUNT(*) CNT FROM FREEBOARD
-		<if test="searchField != null and !searchField.equals('') and searchField.equals('num')">
+		<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM001')">
 			WHERE NUM = #{keyword}
 		</if>
-		<if test="searchField != null and !searchField.equals('') and searchField.equals('title')">
+		<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM002')">
 			WHERE TITLE like '%'||#{keyword}||'%'
 		</if>
 	</select>
@@ -80,9 +80,10 @@
 		#{dto.codeType}, #{num}, #{dto.title}, #{dto.name}, SYSDATE, #{dto.content})
 	</insert>
 
-	<select id="freeBoardDetailByNum" resultType="freeBoardDto" parameterType="int">
+	<select id="freeBoardDetailByNum" resultType="java.util.HashMap" parameterType="int">
 		SELECT 
-		CASE CODE_TYPE WHEN '01' THEN '자유' WHEN '02' THEN '익명' WHEN '03' THEN 'QnA' END AS CODETYPE, 
+		CASE CODE_TYPE WHEN '01' THEN '자유' WHEN '02' THEN '익명' WHEN '03' THEN 'QnA' END AS CODENAME,
+		CODE_TYPE AS CODETYPE,
 		NUM, TITLE, NAME, TO_CHAR(REGDATE,'YYYY/MM/DD') REGDATE, CONTENT FROM FREEBOARD
 		WHERE NUM=#{num}
 	</select>

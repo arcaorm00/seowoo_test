@@ -13,6 +13,17 @@
 	// 검색
 	function searchFunction(page){
 		
+		var regExIsNumeric = /^[0-9]+$/;
+		var deleteBlank = / /gi;
+
+		var searchSelect = $("#searchSelect").val();
+		var searchKeyword = $("#searchKeyword").val().replace(deleteBlank, "");
+		
+		if(searchSelect == 'DCOM001' && !searchKeyword.replace(regExIsNumeric, "") == ""){
+			alert("검색어를 확인해주세요.\n글번호 검색은 숫자만 가능합니다.");
+			return;
+		}
+		
 		var searchJson = {searchField: searchSelect, keyword: searchKeyword, page: page};
 		console.log(searchJson);
 		
@@ -53,14 +64,13 @@
 				
 				$("#boardTable").append(tbody);
 				searchPagination(searchSelect, searchKeyword, pagination);
+				history.pushState('', null, '?searchField=' + searchSelect + "&keyword=" + searchKeyword + "&page=" + page);
 			},
 			error: function(request, status, error){
 				console.log(status);
 				console.log(error);
 			}
-		});
-		
-		
+		});	
 	}
 	
 	// 페이징
@@ -68,10 +78,10 @@
 		
 		$("#paginationDiv").empty();
 		
-		var alpha = $("<span><a href='./main.ino?searchField=" + searchSelect + "&keyword=" + searchKeyword + "&page=1'>[처음]</a></span>");
-		var prev = $("<span><a href='./main.ino?searchField=" + searchSelect + "&keyword=" + searchKeyword + "&page=" + page.prevPage +"'>[이전]</a></span>");
-		var next = $("<span><a href='./main.ino?searchField=" + searchSelect + "&keyword=" + searchKeyword + "&page=" + page.nextPage +"'>[다음]</a></span>");
-		var omega = $("<span><a href='./main.ino?searchField=" + searchSelect + "&keyword=" + searchKeyword + "&page=" + page.totalBlock +"'>[끝]</a></span>");
+		var alpha = $("<span><a href='#' onClick='searchFunction(1);'>[처음]</a></span>");
+		var prev = $("<span><a href='#' onClick='searchFunction(" + page.prevPage + ");'>[이전]</a></span>");
+		var next = $("<span><a href='#' onClick='searchFunction(" + page.nextPage +");'>[다음]</a></span>");
+		var omega = $("<span><a href='#' onClick='searchFunction(" + page.totalBlock +");'>[끝]</a></span>");
 		// var alpha = $("<span><a href='./main.ino?page=1'>[처음]</a></span>");
 		// var prev = $("<span><a href='./main.ino?page=" + page.prevPage + "'>[이전]</a></span>");
 		// var next = $("<span><a href='./main.ino?page=" + page.nextPage + "'>[다음]</a></span>");
@@ -86,7 +96,7 @@
 			if (pageNum == page.currentPage){
 				span = $("<span style='color: red;'>" + pageNum + " </span>");
 			}else{
-				span = $("<span><a href='./main.ino?searchField=" + searchSelect + "&keyword=" + searchKeyword + "&page=" + pageNum +"'>" + pageNum + "</a> </span>");
+				span = $("<span><a href='#' onClick='searchFunction(" + pageNum + ");'>" + pageNum + "</a> </span>");
 			}
 			$("#paginationDiv").append(span);
 		}
@@ -98,23 +108,6 @@
 			$("#paginationDiv").append(omega);
 		}
 	}
-	
-	$(function(){
-		$("#searchBtn").on("click", function(){
-			var regExIsNumeric = /^[0-9]+$/;
-			var deleteBlank = / /gi;
-
-			var searchSelect = $("#searchSelect").val();
-			var searchKeyword = $("#searchKeyword").val().replace(deleteBlank, "");
-			
-			if(searchSelect == 'num' && !searchKeyword.replace(regExIsNumeric, "") == ""){
-				alert("검색어를 확인해주세요.\n글번호 검색은 숫자만 가능합니다.");
-				return;
-			}
-			location.href="./main.ino?searchField="+searchSelect+"&keyword="+searchKeyword+"&page=1"
-			searchFunction(1);
-		});
-	});
 </script>
 </head>
 <body>
@@ -126,11 +119,17 @@
 	<div>
 		<select id="searchSelect">
 			<option value="">전체보기</option>
-			<option value="num" <c:if test="${ searchField eq 'num'}">selected</c:if>>글번호</option>
-			<option value="title" <c:if test="${ searchField eq 'title'}">selected</c:if>>글제목</option>
+			<c:forEach var="nRow" items="${ searchList }">
+				<option value="${ nRow.DECODE }" <c:if test="${ searchField eq nRow.DECODE }">selected</c:if>>${ nRow.DECODE_NAME }</option>
+			</c:forEach>
+		</select>
+		<select id="yearSelect">
+			<c:forEach var="nRow" items="${ yearList }">
+				<option value="${ nRow.DECODE }" <c:if test="${ searchField eq nRow.DECODE }">selected</c:if>>${ nRow.DECODE_NAME }</option>
+			</c:forEach>
 		</select>
 		<input type="text" id="searchKeyword" value="${ keyword }"/>
-		<button type="button" id="searchBtn" name="searchBtn">검색</button>
+		<button type="button" id="searchBtn" name="searchBtn" onClick="searchFunction(1);">검색</button>
 	</div>
 	
 	<div style="width:650px;" align="right">
@@ -172,10 +171,10 @@
 	
 	<div id="paginationDiv">
 		<c:if test="${ pagination.currentPage != 1 }">
-			<span><a href="./main.ino?searchField=${ searchField }&keyword=${ keyword }&page=1">[처음]</a></span>
+			<span><a href="#" onClick="searchFunction(1);">[처음]</a></span>
 		</c:if>
 		<c:if test="${ pagination.currentPage != 1 }">
-			<span><a href="./main.ino?searchField=${ searchField }&keyword=${ keyword }&page=${ pagination.prevPage }">[이전]</a></span>
+			<span><a href="#" onClick="searchFunction(${ pagination.prevPage });">[이전]</a></span>
 		</c:if>
 		
 		<c:forEach var="pageNum" begin="${ pagination.startBlock }" end="${ pagination.endBlock }">
@@ -184,16 +183,16 @@
 					<span style="color: red;">${ pageNum }</span>
 				</c:when>
 				<c:otherwise>
-					<span><a href="./main.ino?searchField=${ searchField }&keyword=${ keyword }&page=${ pageNum }">${ pageNum }</a></span>
+					<span><a href="#" onClick="searchFunction(${ pageNum });">${ pageNum }</a></span>
 				</c:otherwise>
 			</c:choose>
 		</c:forEach>
 		
 		<c:if test="${ pagination.currentPage != pagination.totalPage && pagination.totalPage > 0 }">
-			<span><a href="./main.ino?searchField=${ searchField }&keyword=${ keyword }&page=${ pagination.nextPage }">[다음]</a></span>
+			<span><a href="#" onClick="searchFunction(${ pagination.nextPage });">[다음]</a></span>
 		</c:if>
 		<c:if test="${ pagination.currentPage != pagination.totalBlock && pagination.totalBlock > 0 }">
-			<span><a href="./main.ino?searchField=${ searchField }&keyword=${ keyword }&page=${ pagination.totalBlock }">[끝]</a></span>
+			<span><a href="#" onClick="searchFunction(${ pagination.totalBlock });">[끝]</a></span>
 		</c:if>
 	</div>
 

@@ -1,5 +1,6 @@
 package ino.web.freeBoard.controller;
 
+import ino.web.commonCode.service.CommCodeService;
 import ino.web.freeBoard.common.util.Pagination;
 import ino.web.freeBoard.common.util.PaginationUtil;
 import ino.web.freeBoard.dto.FreeBoardDto;
@@ -24,6 +25,8 @@ public class FreeBoardController {
 	
 	@Autowired
 	private FreeBoardService freeBoardService;
+	@Autowired
+	private CommCodeService commCodeService;
 	
 	@RequestMapping(value="/main.ino", produces="application/json; charset=utf-8")
 	@ResponseBody
@@ -32,6 +35,7 @@ public class FreeBoardController {
 			@RequestParam(defaultValue="") String keyword,
 			@RequestParam(defaultValue="1") int page){
 		
+		//페이징
 		Map<String, Object> totalCntMap = new HashMap<String, Object>();
 		totalCntMap.put("searchField", searchField);
 		totalCntMap.put("keyword", keyword);
@@ -39,7 +43,7 @@ public class FreeBoardController {
 		PaginationUtil pageUtil = new PaginationUtil(page, totalCnt);
 		
 		ModelAndView mav = new ModelAndView();
-		
+		//게시물 리스트
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("searchField", searchField);
 		map.put("keyword", keyword);
@@ -48,8 +52,17 @@ public class FreeBoardController {
 		
 		List<FreeBoardDto> list = freeBoardService.freeBoardList(map);
 		System.out.println("LIST: "+list);
-		
 		System.out.println("PAGINATION ::: " + pageUtil.toString());
+		
+		//공통코드
+		map.put("codeType", "COM002");
+		map.put("useYn", "Y");
+		List<HashMap<String, Object>> yearList = commCodeService.selectDetailCodeList(map);
+		
+
+		map.put("codeType", "COM087");
+		map.put("useYn", "Y");
+		List<HashMap<String, Object>> searchList = commCodeService.selectDetailCodeList(map);
 		
 		mav.setViewName("boardMain");
 		mav.addObject("freeBoardList", list);
@@ -57,6 +70,9 @@ public class FreeBoardController {
 		
 		mav.addObject("searchField", searchField);
 		mav.addObject("keyword", keyword);
+		
+		mav.addObject("yearList", yearList);
+		mav.addObject("searchList", searchList);
 		
 		return mav;
 	}
@@ -68,18 +84,20 @@ public class FreeBoardController {
 			@RequestParam(defaultValue="") String keyword,
 			@RequestParam(defaultValue="1") int page){
 		
+		// 페이징
 		Map<String, Object> totalCntMap = new HashMap<String, Object>();
 		totalCntMap.put("searchField", searchField);
 		totalCntMap.put("keyword", keyword);
 		int totalCnt = freeBoardService.freeBoardGetTotalCnt(totalCntMap);
 		PaginationUtil pageUtil = new PaginationUtil(page, totalCnt);
-	
+		
+		// 게시물 리스트
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("searchField", searchField);
 		map.put("keyword", keyword);
 		map.put("start", pageUtil.getStartPage());
 		map.put("end", pageUtil.getEndPage());
-		
+
 		List<FreeBoardDto> list = freeBoardService.freeBoardList(map);
 		System.out.println("LIST: "+list);
 		System.out.println("PAGINATION ::: " + pageUtil.toString());
@@ -141,8 +159,18 @@ public class FreeBoardController {
 //	}
 	
 	@RequestMapping("/freeBoardInsert.ino")
-	public String freeBoardInsert(){
-		return "freeBoardInsert";
+	@ResponseBody
+	public ModelAndView freeBoardInsert(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("freeBoardInsert");
+		
+		Map<String, Object> writeTypeMap = new HashMap<String, Object>();
+		writeTypeMap.put("codeType", "COM890");
+		writeTypeMap.put("useYn", "Y");
+		List<HashMap<String, Object>> writeTypeCodeList = commCodeService.selectDetailCodeList(writeTypeMap);
+		
+		mav.addObject("writeTypeCodeList", writeTypeCodeList);
+		return mav;
 	}
 	
 	@RequestMapping("/freeBoardInsertPro.ino")
@@ -163,7 +191,8 @@ public class FreeBoardController {
 	@RequestMapping("/freeBoardDetail.ino")
 	public ModelAndView freeBoardDetail(HttpServletRequest request, FreeBoardDto dto){
 		ModelAndView mav = new ModelAndView("freeBoardDetail");
-		FreeBoardDto fb = freeBoardService.getDetailByNum(dto.getNum());
+		Map<String, Object> fb = freeBoardService.getDetailByNum(dto.getNum());
+		System.out.println("DETAIL MAP::" + fb);
 		mav.addObject("freeBoardDto", fb);
 		return mav;
 	}
@@ -172,13 +201,15 @@ public class FreeBoardController {
 	public ModelAndView freeBoardModify(HttpServletRequest request){
 		ModelAndView mav = new ModelAndView("freeBoardModify");
 		int num = Integer.parseInt(request.getParameter("num"));
-		FreeBoardDto fb = freeBoardService.getDetailByNum(num);
-		
-		if(fb.getCodeType().equals("자유")){fb.setCodeType("01");}
-		else if(fb.getCodeType().equals("익명")){fb.setCodeType("02");}
-		else if(fb.getCodeType().equals("QnA")){fb.setCodeType("03");}
+		Map<String, Object> fb = freeBoardService.getDetailByNum(num);
 		System.out.println(fb);
-		 
+		
+		Map<String, Object> writeTypeMap = new HashMap<String, Object>();
+		writeTypeMap.put("codeType", "COM890");
+		writeTypeMap.put("useYn", "Y");
+		List<HashMap<String, Object>> writeTypeCodeList = commCodeService.selectDetailCodeList(writeTypeMap);
+		
+		mav.addObject("writeTypeCodeList", writeTypeCodeList);
 		mav.addObject("freeBoardDto", fb);
 		return mav;
 	}

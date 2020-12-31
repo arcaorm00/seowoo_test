@@ -110,29 +110,29 @@
 -->
 
 	<form name="insertForm">
-		<input type="hidden" id="num" name="num" value="${ freeBoardDto.num }" />
+		<input type="hidden" id="num" name="num" value="${ freeBoardDto.NUM }" />
 		<table border="1">
 			
 			<tbody>
 				<tr>
 					<td style="width: 150px;" align="center">타입 :</td>
-					<td style="width: 400px;"><input type="text" name="codeType" value="${ freeBoardDto.codeType }" readonly/></td>
+					<td style="width: 400px;"><input type="text" name="codeType" value="${ freeBoardDto.CODENAME }" readonly/></td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">이름 :</td>
-					<td style="width: 400px;"><input type="text" name="name" value="${ freeBoardDto.name }" readonly/></td>
+					<td style="width: 400px;"><input type="text" name="name" value="${ freeBoardDto.NAME }" readonly/></td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">제목 :</td>
-					<td style="width: 400px;"><input type="text" name="title"  value="${ freeBoardDto.title }" readonly/></td>
+					<td style="width: 400px;"><input type="text" name="title"  value="${ freeBoardDto.TITLE }" readonly/></td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">작성날자</td>
-					<td style="width: 400px;"><input type="text" name="regdate"  value="${ freeBoardDto.regdate }" readonly/></td>
+					<td style="width: 400px;"><input type="text" name="regdate"  value="${ freeBoardDto.REGDATE }" readonly/></td>
 				</tr>
 				<tr>
 					<td style="width: 150px;"align="center">내용 :</td>
-					<td style="width: 400px;"><textarea style="resize: none;" name="content" rows="25" cols="65" readonly >${ freeBoardDto.content }</textarea></td>
+					<td style="width: 400px;"><textarea style="resize: none;" name="content" rows="25" cols="65" readonly >${ freeBoardDto.CONTENT }</textarea></td>
 				</tr>
 			</tbody>
 			
@@ -140,7 +140,7 @@
 				<tr>
 					<td></td>
 					<td align="right">
-						<input type="button" value="수정" onclick="location.href='./freeBoardModify.ino?num=${ freeBoardDto.num }'">
+						<input type="button" value="수정" onclick="location.href='./freeBoardModify.ino?num=${ freeBoardDto.NUM }'">
 						<input type="button" value="삭제" onClick="clickDelete();">
 						<input type="button" value="취소" onclick="location.href='./main.ino'">
 						&nbsp;&nbsp;&nbsp;

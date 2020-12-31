@@ -38,7 +38,7 @@ public class FreeBoardService {
 		return re;
 	}
 	
-	public FreeBoardDto getDetailByNum(int num){
+	public Map<String, Object> getDetailByNum(int num){
 		return sqlSessionTemplate.selectOne("freeBoardDetailByNum", num);
 	}
 	
