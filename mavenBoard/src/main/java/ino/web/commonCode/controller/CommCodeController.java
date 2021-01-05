@@ -32,4 +32,10 @@ public class CommCodeController {
 		return mav;
 	}
 	
+	@RequestMapping("/commonCodeInsert.ino")
+	public ModelAndView insertCommCode(HttpServletRequest request){
+		ModelAndView mav = new ModelAndView("commonCodeInsert");
+		return mav;
+	}
+	
 }

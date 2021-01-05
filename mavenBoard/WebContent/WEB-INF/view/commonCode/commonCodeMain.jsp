@@ -30,10 +30,10 @@
 		</tr>
 
 	</table>
-	<c:forEach var="nRow" items="${list}">
-		<div style="width: 120px; float: left;">${nRow.CODE }</div>
-			<div style="width: 300px; float: left;"><a href="./commonCodeDetail.ino?num=${nRow.CODE }">${nRow.CODE_NAME }</a></div>
-			<div style="width: 150px; float: left;">${nRow.USE_YN }</div>
+	<c:forEach var="nRow" items="${ list }">
+		<div style="width: 120px; float: left;">${ nRow.CODE }</div>
+			<div style="width: 300px; float: left;"><a href="./commonCodeDetail.ino?num=${ nRow.CODE }">${ nRow.CODE_NAME }</a></div>
+			<div style="width: 150px; float: left;">${ nRow.USE_YN }</div>
 		<hr style="width: 600px">
 	</c:forEach>
 

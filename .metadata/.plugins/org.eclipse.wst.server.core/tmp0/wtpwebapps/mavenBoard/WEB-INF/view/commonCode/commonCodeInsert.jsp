@@ -11,7 +11,7 @@
 		<h1>자유게시판</h1>
 	</div>
 	<div style="width:650px;" align="right">
-		<a href="/commonCode.ino">리스트로</a>
+		<a href="./commonCode.ino">리스트로</a>
 	</div>
 	<hr style="width: 600px">
 
@@ -27,7 +27,7 @@
 		<div align="right">
 		<input type="submit" value="등록">
 		<input type="button" value="다시쓰기" onclick="reset()">
-		<input type="button" value="취소" onclick="">
+		<input type="button" value="취소" onclick="location.href='./commonCode.ino'">
 		&nbsp;&nbsp;&nbsp;
 		</div>
 

@@ -7,7 +7,7 @@
 	
 	<select id="selectCommonCodeList" resultType="java.util.HashMap">
 		SELECT * 
-		  FROM MASTERTABLE
+		  FROM CODEM
 	</select>
 	
 	<select id="selectCode" resultType="java.util.HashMap">
@@ -21,7 +21,6 @@
 		   and M.CODE = #{ codeType } 
 		   and M.USE_YN = #{ useYn } 
 		   and D.USE_YN = #{ useYn }
-		    
 	</select>
 	
 </mapper>

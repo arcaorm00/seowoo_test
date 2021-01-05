@@ -25,15 +25,12 @@
 		}
 		
 		// 날짜 검색
-		//var regExIsDate = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}/;
 		var regExIsDate = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}/;
 		var startDate = $("#startDate").val().replace(deleteBlank, "");
 		var endDate = $("#endDate").val().replace(deleteBlank, "");
 			
 		if((startDate != "" && endDate != "") && (!regExIsDate.test(startDate) || !regExIsDate.test(endDate))){
 			alert("날짜 입력 형식이 올바르지 않습니다.");
-			$("#startDate").val("");
-			$("#endDate").val("");
 			return;
 		}
 		if((startDate != "" && endDate == "") || (startDate == "" && endDate != "")){
@@ -50,6 +47,7 @@
 		var startTypeDate = new Date(startArr[0], startArr[1]-1, startArr[2]);
 		var endTypeDate = new Date(endArr[0], endArr[1]-1, endArr[2]);
 		
+		/*
 		var twoYearsAgo = new Date();
 		twoYearsAgo.setFullYear(twoYearsAgo.getFullYear() - 2);
 		
@@ -57,6 +55,7 @@
 			alert("기간 검색의 날짜는 최대 2년 전까지만 입력할 수 있습니다.");
 			return;
 		}
+		*/
 		
 		startTypeDate.setMonth(startTypeDate.getMonth() + 1);
 		if(startTypeDate.getTime() < endTypeDate.getTime()){
@@ -158,6 +157,7 @@
 	}
 	
 	$(function(){
+		
 		$("#searchKeyword").keypress(function(event){
 			if(event.keyCode == 13){
 				searchFunction(1);
