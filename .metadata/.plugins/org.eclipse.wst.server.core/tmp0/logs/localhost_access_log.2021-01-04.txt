@@ -649,3 +649,10 @@
 0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:46:35 +0900] "GET /mavenBoard/mainSearch.ino?searchField=&keyword=&startDate=2020%2F12%2F31&endDate=9999%2F12%2F12&page=1 HTTP/1.1" 200 617
 0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:47:06 +0900] "GET /mavenBoard/mainSearch.ino?searchField=&keyword=&startDate=1900%2F01%2F01&endDate=9999%2F12%2F12&page=1 HTTP/1.1" 200 1614
 0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:48:26 +0900] "GET /mavenBoard/mainSearch.ino?searchField=&keyword=&startDate=1970%2F01%2F01&endDate=2020%2F12%2F31&page=1 HTTP/1.1" 200 1614
+127.0.0.1 - - [04/Jan/2021:16:52:43 +0900] "GET / HTTP/1.1" 404 950
+0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:52:46 +0900] "GET /mavenBoard/main.ino?searchField=&keyword=&startDate=1970/01/01&endDate=2020/12/31&page=1 HTTP/1.1" 200 15129
+0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:52:47 +0900] "GET /mavenBoard/main.ino HTTP/1.1" 200 15109
+0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:53:20 +0900] "GET /mavenBoard/main.ino HTTP/1.1" 200 15086
+0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:53:21 +0900] "GET /mavenBoard/main.ino HTTP/1.1" 200 15086
+0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:53:22 +0900] "GET /mavenBoard/main.ino HTTP/1.1" 200 15086
+0:0:0:0:0:0:0:1 - - [04/Jan/2021:16:54:45 +0900] "GET /mavenBoard/main.ino HTTP/1.1" 200 15086

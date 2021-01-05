@@ -28,23 +28,38 @@
 		var regExIsDate = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}/;
 		var startDate = $("#startDate").val().replace(deleteBlank, "");
 		var endDate = $("#endDate").val().replace(deleteBlank, "");
-		
-		if(!regExIsDate.test(startDate) || !regExIsDate.test(endDate)){
+			
+		if((startDate != "" && endDate != "") && (!regExIsDate.test(startDate) || !regExIsDate.test(endDate))){
 			alert("날짜 입력 형식이 올바르지 않습니다.");
+			$("#startDate").val("");
+			$("#endDate").val("");
 			return;
 		}
-		if(!startDate.replaceAll("/", "").replace(regExIsNumeric, "") == "" || !endDate.replaceAll("/", "").replace(regExIsNumeric, "") == ""){
+		/*
+		if(!regExIsNumeric.test(startDate.replaceAll("/", "")) || !regExIsNumeric.test(endDate.replaceAll("/", ""))){
 			alert("날짜는 숫자로만 입력할 수 있습니다.");
 			$("#startDate").val("");
 			$("#endDate").val("");
 			return;
 		}
+		*/
 		if((startDate != "" && endDate == "") || (startDate == "" && endDate != "")){
 			alert("시작일과 종료일 중 하나를 비워둘 수는 없습니다.");
 			return;
 		}
 		if(parseInt(startDate.replaceAll("/", "")) > parseInt(endDate.replaceAll("/", ""))){
 			alert("종료일이 시작일보다 이전 날짜가 될 수는 없습니다.");
+			return;
+		}
+		
+		var startArr = startDate.split("/");
+		var endArr = endDate.split("/");
+		var startTypeDate = new Date(startArr[0], startArr[1]-1, startArr[2]);
+		var endTypeDate = new Date(endArr[0], endArr[1]-1, endArr[2]);
+		
+		startTypeDate.setMonth(startTypeDate.getMonth() + 1);
+		if(startTypeDate.getTime() < endTypeDate.getTime()){
+			alert("기간 검색은 최대 한달까지 가능합니다.");
 			return;
 		}
 		

@@ -29,20 +29,18 @@
 		var startDate = $("#startDate").val().replace(deleteBlank, "");
 		var endDate = $("#endDate").val().replace(deleteBlank, "");
 			
-		if((startDate != "" && endDate != "") && (!regExIsDate.test(startDate) || !regExIsDate.test(endDate))){
+		if(!regExIsDate.test(startDate) || !regExIsDate.test(endDate)){
 			alert("날짜 입력 형식이 올바르지 않습니다.");
 			$("#startDate").val("");
 			$("#endDate").val("");
 			return;
 		}
-		/*
 		if(!regExIsNumeric.test(startDate.replaceAll("/", "")) || !regExIsNumeric.test(endDate.replaceAll("/", ""))){
 			alert("날짜는 숫자로만 입력할 수 있습니다.");
 			$("#startDate").val("");
 			$("#endDate").val("");
 			return;
 		}
-		*/
 		if((startDate != "" && endDate == "") || (startDate == "" && endDate != "")){
 			alert("시작일과 종료일 중 하나를 비워둘 수는 없습니다.");
 			return;
