@@ -33,20 +33,27 @@ public class FreeBoardController {
 	public ModelAndView main(HttpServletRequest request, 
 			@RequestParam(defaultValue="") String searchField, 
 			@RequestParam(defaultValue="") String keyword,
+			@RequestParam(defaultValue="") String startDate,
+			@RequestParam(defaultValue="") String endDate,			
 			@RequestParam(defaultValue="1") int page){
 		
 		//페이징
 		Map<String, Object> totalCntMap = new HashMap<String, Object>();
 		totalCntMap.put("searchField", searchField);
 		totalCntMap.put("keyword", keyword);
+		totalCntMap.put("startDate", startDate);
+		totalCntMap.put("endDate", endDate);
 		int totalCnt = freeBoardService.freeBoardGetTotalCnt(totalCntMap);
 		PaginationUtil pageUtil = new PaginationUtil(page, totalCnt);
 		
 		ModelAndView mav = new ModelAndView();
+		
 		//게시물 리스트
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("searchField", searchField);
 		map.put("keyword", keyword);
+		map.put("startDate", startDate);
+		map.put("endDate", endDate);
 		map.put("start", pageUtil.getStartPage());
 		map.put("end", pageUtil.getEndPage());
 		
@@ -59,7 +66,6 @@ public class FreeBoardController {
 		map.put("useYn", "Y");
 		List<HashMap<String, Object>> yearList = commCodeService.selectDetailCodeList(map);
 		
-
 		map.put("codeType", "COM087");
 		map.put("useYn", "Y");
 		List<HashMap<String, Object>> searchList = commCodeService.selectDetailCodeList(map);
@@ -70,6 +76,9 @@ public class FreeBoardController {
 		
 		mav.addObject("searchField", searchField);
 		mav.addObject("keyword", keyword);
+		
+		mav.addObject("startDate", startDate);
+		mav.addObject("endDate", endDate);
 		
 		mav.addObject("yearList", yearList);
 		mav.addObject("searchList", searchList);
@@ -82,12 +91,16 @@ public class FreeBoardController {
 	public Map<String, Object> mainSearch(HttpServletRequest request, 
 			@RequestParam(defaultValue="") String searchField,
 			@RequestParam(defaultValue="") String keyword,
+			@RequestParam(defaultValue="") String startDate,
+			@RequestParam(defaultValue="") String endDate,
 			@RequestParam(defaultValue="1") int page){
 		
 		// 페이징
 		Map<String, Object> totalCntMap = new HashMap<String, Object>();
 		totalCntMap.put("searchField", searchField);
 		totalCntMap.put("keyword", keyword);
+		totalCntMap.put("startDate", startDate);
+		totalCntMap.put("endDate", endDate);
 		int totalCnt = freeBoardService.freeBoardGetTotalCnt(totalCntMap);
 		PaginationUtil pageUtil = new PaginationUtil(page, totalCnt);
 		
@@ -95,6 +108,8 @@ public class FreeBoardController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("searchField", searchField);
 		map.put("keyword", keyword);
+		map.put("startDate", startDate);
+		map.put("endDate", endDate);
 		map.put("start", pageUtil.getStartPage());
 		map.put("end", pageUtil.getEndPage());
 
@@ -107,6 +122,8 @@ public class FreeBoardController {
 		returnMap.put("page", pageUtil);
 		returnMap.put("searchField", searchField);
 		returnMap.put("keyword", keyword);
+		returnMap.put("startDate", startDate);
+		returnMap.put("endDate", endDate);
 		
 		return returnMap;
 	}

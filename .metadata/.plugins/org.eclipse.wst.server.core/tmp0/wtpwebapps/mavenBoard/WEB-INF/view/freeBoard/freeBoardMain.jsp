@@ -24,7 +24,31 @@
 			return;
 		}
 		
-		var searchJson = {searchField: searchSelect, keyword: searchKeyword, page: page};
+		// 날짜 검색
+		var regExIsDate = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}/;
+		var startDate = $("#startDate").val().replace(deleteBlank, "");
+		var endDate = $("#endDate").val().replace(deleteBlank, "");
+		
+		if(!regExIsDate.test(startDate) || !regExIsDate.test(endDate)){
+			alert("날짜 입력 형식이 올바르지 않습니다.");
+			return;
+		}
+		if(!startDate.replaceAll("/", "").replace(regExIsNumeric, "") == "" || !endDate.replaceAll("/", "").replace(regExIsNumeric, "") == ""){
+			alert("날짜는 숫자로만 입력할 수 있습니다.");
+			$("#startDate").val("");
+			$("#endDate").val("");
+			return;
+		}
+		if((startDate != "" && endDate == "") || (startDate == "" && endDate != "")){
+			alert("시작일과 종료일 중 하나를 비워둘 수는 없습니다.");
+			return;
+		}
+		if(parseInt(startDate.replaceAll("/", "")) > parseInt(endDate.replaceAll("/", ""))){
+			alert("종료일이 시작일보다 이전 날짜가 될 수는 없습니다.");
+			return;
+		}
+		
+		var searchJson = {searchField: searchSelect, keyword: searchKeyword, startDate: startDate, endDate: endDate, page: page};
 		console.log(searchJson);
 		
 		$.ajax({
@@ -63,8 +87,8 @@
 				}
 				
 				$("#boardTable").append(tbody);
-				searchPagination(searchSelect, searchKeyword, pagination);
-				history.pushState('', null, '?searchField=' + searchSelect + "&keyword=" + searchKeyword + "&page=" + page);
+				searchPagination(pagination);
+				history.pushState('', null, '?searchField=' + searchSelect + "&keyword=" + searchKeyword + "&startDate=" + startDate + "&endDate=" + endDate + "&page=" + page);
 			},
 			error: function(request, status, error){
 				console.log(status);
@@ -74,14 +98,14 @@
 	}
 	
 	// 페이징
-	function searchPagination(searchSelect, searchKeyword, page){
+	function searchPagination(page){
 		
 		$("#paginationDiv").empty();
 		
 		var alpha = $("<span><a href='#' onClick='searchFunction(1);'>[처음]</a></span>");
 		var prev = $("<span><a href='#' onClick='searchFunction(" + page.prevPage + ");'>[이전]</a></span>");
 		var next = $("<span><a href='#' onClick='searchFunction(" + page.nextPage +");'>[다음]</a></span>");
-		var omega = $("<span><a href='#' onClick='searchFunction(" + page.totalBlock +");'>[끝]</a></span>");
+		var omega = $("<span><a href='#' onClick='searchFunction(" + page.totalPage +");'>[끝]</a></span>");
 		// var alpha = $("<span><a href='./main.ino?page=1'>[처음]</a></span>");
 		// var prev = $("<span><a href='./main.ino?page=" + page.prevPage + "'>[이전]</a></span>");
 		// var next = $("<span><a href='./main.ino?page=" + page.nextPage + "'>[다음]</a></span>");
@@ -104,10 +128,26 @@
 		if(page.currentPage != page.totalPage && page.totalPage > 0){
 			$("#paginationDiv").append(next);
 		}
-		if(page.currentPage != page.totalBlock && page.totalBlock > 0){
+		if(page.currentPage != page.totalPage && page.totalPage > 0){
 			$("#paginationDiv").append(omega);
 		}
 	}
+	
+	function textAutocomplete(event, date){
+		var len = date.value.length;
+
+		if(len == 4){ date.value += "/"; }
+		if(len == 7){ date.value += "/"; }
+		if(len == 9){ $("#endDate").focus(); }
+	}
+	
+	$(function(){
+		$("#searchKeyword").keypress(function(event){
+			if(event.keyCode == 13){
+				searchFunction(1);
+			}
+		})
+	})
 </script>
 </head>
 <body>
@@ -130,6 +170,11 @@
 		</select>
 		<input type="text" id="searchKeyword" value="${ keyword }"/>
 		<button type="button" id="searchBtn" name="searchBtn" onClick="searchFunction(1);">검색</button>
+	</div>
+	
+	<div>
+		시작일 : <input type="text" id="startDate" name="startDate" maxlength="10" onkeypress="textAutocomplete(event, this);" value="${ startDate }" placeholder="0000/00/00"/> ~ 
+		종료일 : <input type="text" id="endDate" name="endDate" maxlength="10" onkeypress="textAutocomplete(event, this);" value="${ endDate }" placeholder="0000/00/00"/>
 	</div>
 	
 	<div style="width:650px;" align="right">

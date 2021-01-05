@@ -13,11 +13,15 @@
 		 		NUM, NAME, TITLE, CONTENT, TO_CHAR(REGDATE , 'YYYY/MM/DD') AS REGDATE 
 				FROM 
 				FREEBOARD
+				WHERE 1 = 1
 				<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM001')">
-					WHERE NUM = #{keyword}
+					AND NUM = #{keyword}
 				</if>
 				<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM002')">
-					WHERE TITLE like '%'||#{keyword}||'%'
+					AND TITLE like '%'||#{keyword}||'%'
+				</if>
+				<if test="startDate != ''">
+					AND TO_CHAR(REGDATE , 'YYYY/MM/DD') BETWEEN #{startDate} and #{endDate}
 				</if>
 			) PAGE_BOARD
 		WHERE rn BETWEEN #{start} and #{end}
@@ -62,11 +66,15 @@
 
 	<select id="freeBoardGetTotalCnt" resultType="int">
 		SELECT COUNT(*) CNT FROM FREEBOARD
+		WHERE 1 = 1
 		<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM001')">
-			WHERE NUM = #{keyword}
+			AND NUM = #{keyword}
 		</if>
 		<if test="searchField != null and !searchField.equals('') and searchField.equals('DCOM002')">
-			WHERE TITLE like '%'||#{keyword}||'%'
+			AND TITLE like '%'||#{keyword}||'%'
+		</if>
+		<if test="startDate != ''">
+			AND TO_CHAR(REGDATE , 'YYYY/MM/DD') BETWEEN #{startDate} and #{endDate}
 		</if>
 	</select>
 
