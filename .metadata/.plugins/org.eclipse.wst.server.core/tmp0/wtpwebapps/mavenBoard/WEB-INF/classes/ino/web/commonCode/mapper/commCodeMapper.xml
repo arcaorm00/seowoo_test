@@ -23,4 +23,15 @@
 		   and D.USE_YN = #{ useYn }
 	</select>
 	
+	<select id="selectByCode" resultType="java.util.HashMap">
+		SELECT M.CODE
+		     , M.CODE_NAME
+		     , D.DECODE
+		     , D.DECODE_NAME
+		     , D.USE_YN
+		  FROM CODEM M, CODED D 
+		 WHERE M.CODE = D.CODE 
+		   and M.CODE = #{ codeType }
+	</select>
+	
 </mapper>

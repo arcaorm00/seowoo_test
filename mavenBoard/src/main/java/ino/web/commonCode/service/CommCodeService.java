@@ -21,6 +21,10 @@ public class CommCodeService {
 	public List<HashMap<String, Object>> selectDetailCodeList(Map<String, Object> codeMap){
 		return sqlSessionTemplate.selectList("selectCode", codeMap);
 	}
+	
+	public List<HashMap<String, Object>> selectByCode(Map<String, Object> map){
+		return sqlSessionTemplate.selectList("selectByCode", map);
+	}
 
 	
 }
