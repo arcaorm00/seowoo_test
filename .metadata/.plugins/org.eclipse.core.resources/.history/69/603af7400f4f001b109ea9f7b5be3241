@@ -64,6 +64,8 @@
 			return;
 		}
 		
+		
+		
 		var searchJson = {searchField: searchSelect, keyword: searchKeyword, startDate: startDate, endDate: endDate, page: page};
 		console.log(searchJson);
 		

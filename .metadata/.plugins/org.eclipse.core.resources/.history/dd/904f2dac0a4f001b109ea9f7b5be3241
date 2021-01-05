@@ -53,7 +53,7 @@
 		var twoYearsAgo = new Date();
 		twoYearsAgo.setFullYear(twoYearsAgo.getFullYear() - 2);
 		
-		if(startTypeDate.getTime() < twoYearsAgo.getTime() || endTypeDate.getTime() < twoYearsAgo.getTime()){
+		if(startTypeDate.getTime() < twoYearsAgo.getTime()){
 			alert("기간 검색의 날짜는 최대 2년 전까지만 입력할 수 있습니다.");
 			return;
 		}
@@ -63,6 +63,8 @@
 			alert("시작일과 종료일의 날짜 간격은 최대 한달까지 가능합니다.");
 			return;
 		}
+		
+		
 		
 		var searchJson = {searchField: searchSelect, keyword: searchKeyword, startDate: startDate, endDate: endDate, page: page};
 		console.log(searchJson);
