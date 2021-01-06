@@ -32,7 +32,7 @@
 	</table>
 	<c:forEach var="nRow" items="${ list }">
 		<div style="width: 120px; float: left;">${ nRow.CODE }</div>
-			<div style="width: 300px; float: left;"><a href="javascript:void(0);" onClick="window.open('./commonCodeDetail.ino?num=${ nRow.CODE }', null, 'width=1000 height=1000')">${ nRow.CODE_NAME }</a></div>
+			<div style="width: 300px; float: left;"><a href="javascript:void(0);" onClick="window.open('./commonCodeDetail.ino?num=${ nRow.CODE }', null, 'width=820 height=1000 fullscreen=no resizable=no')">${ nRow.CODE_NAME }</a></div>
 			<div style="width: 150px; float: left;">${ nRow.USE_YN }</div>
 		<hr style="width: 600px">
 	</c:forEach>
