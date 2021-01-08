@@ -33,7 +33,10 @@ public class CommCodeService {
 		return sqlSessionTemplate.selectList("selectByCode", map);
 	}
 	
-	public int isExistCode(Map<String, Object> map){
+	public int isExistCode(List<Map<String, Object>> codeList){
+		System.out.println(codeList.toString());
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("codeList", codeList);
 		return sqlSessionTemplate.selectOne("isExistCode", map);
 	}
 	
@@ -43,11 +46,9 @@ public class CommCodeService {
 		int re = 0;
 		System.out.println("codeList: " + codeList);
 		try{
-//			Map<String, Object> map = new HashMap<String, Object>();
-//			map.put("codeList", codeList);
-			for (Map<String, Object> code: codeList){
-				re += sqlSessionTemplate.insert("insertDecode", code);
-			}
+			Map<String, Object> code = new HashMap<String, Object>();
+			code.put("codeList", codeList);
+			re += sqlSessionTemplate.insert("insertDecode", code);
 			System.out.println("SERVICE RE :: " + re);
 			transactionManager.commit(status);
 		}catch (Exception e) {

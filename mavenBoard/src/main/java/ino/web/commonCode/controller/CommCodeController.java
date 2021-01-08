@@ -62,13 +62,10 @@ public class CommCodeController {
 	
 	@RequestMapping("/detailCodeIsExist.ino")
 	@ResponseBody
-	public int isExistCode(HttpServletRequest request,
-			@RequestParam String code,
-			@RequestParam String detailcode){
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("code", code);
-		map.put("decode", detailcode);
-		int cnt = commCodeService.isExistCode(map);
+	public int isExistCode(HttpServletRequest request, @RequestParam String codeList) throws Exception{
+		ObjectMapper mapper = new ObjectMapper();
+		ArrayList<Map<String, Object>> list = mapper.readValue(codeList, ArrayList.class);
+		int cnt = commCodeService.isExistCode(list);
 		return cnt;
 	}
 	
@@ -78,7 +75,7 @@ public class CommCodeController {
 		boolean isInserted = false;
 		ObjectMapper mapper = new ObjectMapper();
 		ArrayList<Map<String, Object>> list = mapper.readValue(codeList, ArrayList.class);
-		System.out.println("파싱 List: " + list.size());
+		System.out.println("파싱 List: " + list);
 		int re = commCodeService.insertDetailCode(list);
 		if(re == list.size()){
 			isInserted = true;

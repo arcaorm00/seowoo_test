@@ -33,22 +33,35 @@
 		   and M.CODE = #{ codeType }
 	  ORDER BY D.DECODE DESC
 	</select>
-	
+<!-- 	
 	<select id="isExistCode" resultType="int">
 		SELECT COUNT(DECODE) 
 		  FROM CODED
 		 WHERE CODE = #{ code }
 		   and DECODE = #{ decode }
 	</select>
-	
+-->
+ 
+	<select id="isExistCode" resultType="int" parameterType="java.util.Map">
+		SELECT COUNT(DECODE) 
+		  FROM CODED
+		 WHERE CODE = #{ codeList[0].CODE }
+		   and (
+		   <foreach collection="codeList" item="code" separator=" or " >
+		   	DECODE = #{ code.DECODE }
+		   </foreach>
+		   )
+	</select>
+
+<!--
 	<insert id="insertDecode">
 		INSERT INTO CODED(
 				CODE, DECODE, DECODE_NAME, USE_YN
 			) VALUES
 	        ( #{ CODE }, #{ DECODE }, #{ DECODE_NAME }, #{ USE_YN } )
 	</insert>
-	
-	<!-- 
+-->	
+	 
 	<insert id="insertDecode" parameterType="java.util.Map">
 		INSERT ALL
 		<foreach collection="codeList" item="code" separator=" " >
@@ -59,5 +72,5 @@
     	</foreach>
     	SELECT * FROM DUAL
 	</insert>
-	-->
+	
 </mapper>

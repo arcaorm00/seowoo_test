@@ -31,6 +31,7 @@ $(function(){
 	var confirmed = false;
 	$("#insertBtn").click(function(){
 		var codeList = [];
+		var duplicated = "";
 		confirmed = false;
 
 		for(var i = 0; i < round; i++){
@@ -46,31 +47,39 @@ $(function(){
 				alert("입력이 완료되지 않은 행이 있습니다.");
 				return;
 			}
+			if(detailcode == duplicated){
+				alert("세부 코드에 중복되는 값을 입력했습니다.");
+				return;
+			}
 			
-			// 중복 확인
-			$.ajax({
-				data: {code: code, detailcode: detailcode},
-				url: "./detailCodeIsExist.ino",
-				success: function(re){
-					if(re > 0){
-						alert("세부 코드는 중복될 수 없습니다.\n다시 한번 확인해주시기 바랍니다.");
-						confirmed = false;
-						return false;
-					}
-				},
-				error: function(request, status, error){
-					console.log(status);
-					console.log(error);
-				}
-			});
+			duplicated = detailcode;
 			
 			var row = {CODE: code, DECODE: detailcode, DECODE_NAME: codename, USE_YN: useyn};
 			codeList.push(row);
-			confirmed = true;
 		}
 		console.log(codeList);
-		
 		var list = {'codeList': JSON.stringify(codeList)};
+		
+		// 중복 확인
+		$.ajax({
+			data: list,
+			url: "./detailCodeIsExist.ino",
+			async: false,
+			success: function(re){
+				confirmed = false;
+				if(re > 0){
+					alert("세부 코드는 중복될 수 없습니다.\n다시 한번 확인해주시기 바랍니다.");
+					return false;
+				}else{
+					confirmed = true;
+				}
+			},
+			error: function(request, status, error){
+				console.log(status);
+				console.log(error);
+			}
+		});
+		
 		console.log(list);
 		console.log("confirmed:: " + confirmed);
 		
@@ -97,6 +106,28 @@ $(function(){
 	});
 
 });
+
+function isReduplicate(list){
+	// 중복 확인
+	$.ajax({
+		data: list,
+		url: "./detailCodeIsExist.ino",
+		async: false,
+		success: function(re){
+			confirmed = false;
+			if(re > 0){
+				alert("세부 코드는 중복될 수 없습니다.\n다시 한번 확인해주시기 바랍니다.");
+				return false;
+			}else{
+				confirmed = true;
+			}
+		},
+		error: function(request, status, error){
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
 </script>
 </head>
 <body>
