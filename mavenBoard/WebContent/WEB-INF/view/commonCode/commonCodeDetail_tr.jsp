@@ -38,7 +38,7 @@ $(function(){
 			var decodeName = $("#decodeName_" + checkValue);
 			var useYn = $("#useYn_" + checkValue);
 			
-			var flag = $("<input type='hidden' name='FLAG' class='FLAG' value='I'/>");
+			var flag = $("<input type='hidden' name='FLAG' class='FLAG' value='U'/>");
 			var decodeNameInput = $("<input type='text' width='100%' id='updateDecodeName"+checkValue+"' value='"+decodeName.text()+"'/>");
 			var useYnInput;
 			
@@ -48,7 +48,7 @@ $(function(){
 				useYnInput = $("<span><input type='radio' name='updateUseYnRadio"+checkValue+"' value='Y'/>Y<input type='radio' name='updateUseYnRadio"+checkValue+"' value='N' checked />N</span>");
 			}
 			decodeName.empty(); useYn.empty();
-			decodeName.append(decodeNameInput);
+			decodeName.append(flag, decodeNameInput);
 			useYn.append(useYnInput);
 		}
 		//$("#updateBtn").attr("disabled", "disabled");

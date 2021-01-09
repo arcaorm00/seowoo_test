@@ -47,8 +47,8 @@
 		  FROM CODED
 		 WHERE CODE = #{ codeList[0].CODE }
 		   and (
-		   <foreach collection="codeList" item="code" separator=" or " >
-		   	DECODE = #{ code.DECODE }
+		   <foreach collection="codeList" item="code" index="i" separator=" or " >
+			   	DECODE = #{ code.DECODE } and #{ code.FLAG } != 'U'
 		   </foreach>
 		   )
 	</select>

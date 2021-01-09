@@ -48,7 +48,7 @@ public class CommCodeController {
 	@RequestMapping("/commonCodeDetail.ino")
 	public ModelAndView detailCommCode(HttpServletRequest request,
 			@RequestParam String num){
-		ModelAndView mav = new ModelAndView("commonCode/commonCodeDetail_tr");
+		ModelAndView mav = new ModelAndView("commonCode/commonCodeDetail");
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		

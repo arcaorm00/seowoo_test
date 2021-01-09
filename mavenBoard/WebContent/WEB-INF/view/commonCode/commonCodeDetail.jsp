@@ -17,7 +17,7 @@ $(function(){
 		if (round < 3){
 			var form = $("<form name='codeForm'  onsubmit='return false'></form>");
 			var flag = $("<input type='hidden' name='FLAG' value='I'/>");
-			var checkbox = $("<input type='checkbox' name='codeCheck' disabled='disabled'/>");
+			var checkbox = $("<input type='checkbox' name='codeCheck' disabled='disabled' checked/>");
 			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"'/>");
 			var detailcode = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE'/>");
 			var decodename = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE_NAME'/>");
@@ -35,6 +35,9 @@ $(function(){
 			var decodename = row[3];
 			var useYn = row[4];
 			
+			var flag = $("<input type='hidden' name='FLAG' value='U'/>");
+			$(this).append(flag);
+			
 			decodename.disabled = false;
 			useYn.disabled = false;
 		});
@@ -47,7 +50,15 @@ $(function(){
 		confirmed = false;
 		
 		//var trs = $("input[name='codeCheck']:checked").parents("tr");
-		var formData = $("form[name='codeForm']").serializeObject();
+		
+		//$("form[name='codeForm']").each(function(){
+		$("input[name='codeCheck']:checked").parent().each(function(){
+			$(this).children("input[name='CODE']").attr("disabled", false);
+			$(this).children("input[name='DECODE']").attr("disabled", false);
+			var formData = $(this).serializeObject();
+			codeList.push(formData);
+		});
+		//var formData = $("form[name='codeForm']").serializeObject();
 		
 		/*
 		for(var i = 0; i < round; i++){
@@ -136,12 +147,10 @@ var list = [];
 
 $.fn.serializeObject = function() {
     var obj = null;
-    console.log(this);
     try {
     	
         if (this[0].tagName && this[0].tagName.toUpperCase() == "FORM") {
             var arr = this.serializeArray();
-            console.log(arr);
             if (arr) {
             	obj = {};
                 $.each(arr, function(idx, input) {
@@ -153,7 +162,6 @@ $.fn.serializeObject = function() {
         alert(e.message);
     } finally {
     }
-    console.log(obj);
     return obj;
 };
 
@@ -194,7 +202,7 @@ $.fn.serializeObject = function() {
 				
 					<div id="codeBoard">
 						<c:forEach var="nRow" items="${ list }">
-							<form name="codeForm"  onsubmit="return false">
+							<form name="codeForm" onsubmit="return false">
 								<input type="checkbox" name="codeCheck" value="${ nRow.DECODE }"/>
 								<input type='text' style='width: 100px;' name='CODE' value="${ nRow.CODE }" disabled="disabled"/>
 								<input type='text' style='width: 170px;' name='DECODE' value="${ nRow.DECODE }" disabled="disabled"/>
