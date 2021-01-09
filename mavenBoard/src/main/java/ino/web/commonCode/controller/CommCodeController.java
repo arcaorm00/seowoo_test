@@ -48,7 +48,7 @@ public class CommCodeController {
 	@RequestMapping("/commonCodeDetail.ino")
 	public ModelAndView detailCommCode(HttpServletRequest request,
 			@RequestParam String num){
-		ModelAndView mav = new ModelAndView("commonCode/commonCodeDetail");
+		ModelAndView mav = new ModelAndView("commonCode/commonCodeDetail_tr");
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		
@@ -60,26 +60,27 @@ public class CommCodeController {
 		return mav;
 	}
 	
-	@RequestMapping("/detailCodeIsExist.ino")
+	@RequestMapping(value="/detailCodeIsExist.ino")
 	@ResponseBody
-	public int isExistCode(HttpServletRequest request, @RequestParam String codeList) throws Exception{
-		ObjectMapper mapper = new ObjectMapper();
-		ArrayList<Map<String, Object>> list = mapper.readValue(codeList, ArrayList.class);
-		int cnt = commCodeService.isExistCode(list);
+	public int isExistCode(HttpServletRequest request, @RequestBody List<Map<String, Object>> codeList) throws Exception{
+		System.out.println("DETAIL CODE IS EXIST ::: ");
+		System.out.println(codeList.toString());
+		int cnt = commCodeService.isExistCode(codeList);
 		return cnt;
 	}
 	
-	@RequestMapping(value="/insertDetailCode.ino")
+	@RequestMapping(value="/registerDetailCode.ino")
 	@ResponseBody
-	public boolean insertDetailCode(HttpServletRequest request, @RequestParam String codeList) throws Exception{
+	public boolean registerDetailCode(HttpServletRequest request, 
+			@RequestBody List<Map<String, Object>> codeList) throws Exception{
 		boolean isInserted = false;
-		ObjectMapper mapper = new ObjectMapper();
-		ArrayList<Map<String, Object>> list = mapper.readValue(codeList, ArrayList.class);
-		System.out.println("파싱 List: " + list);
-		int re = commCodeService.insertDetailCode(list);
-		if(re == list.size()){
-			isInserted = true;
-		}
+//		ObjectMapper mapper = new ObjectMapper();
+//		ArrayList<Map<String, Object>> list = mapper.readValue(newCodeList, ArrayList.class);
+		System.out.println("파싱 List: " + codeList);
+//		int re = commCodeService.insertDetailCode(codeList);
+//		if(re == codeList.size()){
+//			isInserted = true;
+//		}
 		return isInserted;
 	}
 	

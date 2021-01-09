@@ -34,7 +34,6 @@ public class CommCodeService {
 	}
 	
 	public int isExistCode(List<Map<String, Object>> codeList){
-		System.out.println(codeList.toString());
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("codeList", codeList);
 		return sqlSessionTemplate.selectOne("isExistCode", map);
@@ -44,7 +43,6 @@ public class CommCodeService {
 	public int insertDetailCode(List<Map<String, Object>> codeList){
 		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
 		int re = 0;
-		System.out.println("codeList: " + codeList);
 		try{
 			Map<String, Object> code = new HashMap<String, Object>();
 			code.put("codeList", codeList);
@@ -56,4 +54,20 @@ public class CommCodeService {
 		}
 		return re;
 	}
+	
+//	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
+//	public int updateDetailCode(List<Map<String, Object>> updateCodeList){
+//		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
+//		int re = 0;
+//		try{
+//			Map<String, Object> code = new HashMap<String, Object>();
+//			code.put("updateCodeList", updateCodeList);
+//			re += sqlSessionTemplate.update("updateDecode", code);
+//			System.out.println("SERVICE RE :: " + re);
+//			transactionManager.commit(status);
+//		}catch (Exception e) {
+//			transactionManager.rollback(status);
+//		}
+//		return re;
+//	}
 }
