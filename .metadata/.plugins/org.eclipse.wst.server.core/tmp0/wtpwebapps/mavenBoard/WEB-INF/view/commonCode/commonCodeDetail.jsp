@@ -21,7 +21,7 @@ $(function(){
 			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"' readonly/>");
 			var detailcode = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE'/>");
 			var decodename = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE_NAME'/>");
-			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 15px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
+			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
 			form.append(flag, checkbox, mastercode, detailcode, decodename, useyn);
 			$("#codeBoard").append(form);
 			round += 1;
@@ -32,6 +32,9 @@ $(function(){
 	
 	$("#updateBtn").click(function(){
 		$("input[name='codeCheck']:checked").parent().each(function(){
+			if($(this).children("input[name='FLAG']").val() == "I"){
+				return;
+			}
 			var decodename = $(this).children("input[name='DECODE_NAME']");
 			var useyn = $(this).children("input[name='USE_YN']");
 
@@ -44,7 +47,6 @@ $(function(){
 				console.log($(this).children("span").children("input[name='USE_YN']:checked").val());		
 				useynValue = $(this).children("span").children("input[name='USE_YN']:checked").val();
 			}
-			
 			
 			var newUseYn = null;
 			if (useynValue == "Y"){
@@ -73,8 +75,6 @@ $(function(){
 		var duplicated = "";
 		confirmed = false;
 		
-		//var trs = $("input[name='codeCheck']:checked").parents("tr");
-		
 		//$("form[name='codeForm']").each(function(){
 		$("input[name='codeCheck']:checked").parent().each(function(){
 			
@@ -90,11 +90,12 @@ $(function(){
 			// 입력 확인
 			if(detailcode == "" || decodename == "" || useyn == undefined){
 				alert("입력이 완료되지 않은 행이 있습니다.");
-				return;
-			}
-			if(detailcode == duplicated){
+				confirmed = false;
+			}else if(detailcode == duplicated){
 				alert("세부 코드에 중복되는 값을 입력했습니다.");
-				return;
+				confirmed = false;
+			}else {
+				confirmed = true;
 			}
 			
 			duplicated = detailcode;
@@ -135,51 +136,26 @@ $(function(){
 			codeList.push(row);
 		}
 		*/
-
-		console.log(codeList);
-		var list = JSON.stringify(codeList);
 		
-		// 중복 확인
-		$.ajax({
-			data: list,
-			url: "./detailCodeIsExist.ino",
-			async: false,
-			datatype: "json",
-			contentType: "application/json; charset=UTF-8",  
-			type: "POST",
-			success: function(re){
-				confirmed = false;
-				if(re > 0){
-					alert("세부 코드는 중복될 수 없습니다.\n다시 한번 확인해주시기 바랍니다.");
-					return false;
-				}else{
-					confirmed = true;
-				}
-			},
-			error: function(request, status, error){
-				console.log(status);
-				console.log(error);
-			}
-		});
-		
-		console.log("----------- list ------------");
-		console.log(list);
-		console.log("confirmed:: " + confirmed);
-		
-		if(confirmed){
+		if (confirmed){
+			console.log(codeList);
+			var list = JSON.stringify(codeList);
 			
+			// 중복 확인
 			$.ajax({
 				data: list,
-				url: "./registerDetailCode.ino",
+				url: "./detailCodeIsExist.ino",
+				async: false,
 				datatype: "json",
 				contentType: "application/json; charset=UTF-8",  
 				type: "POST",
 				success: function(re){
-					if(re){
-						alert("코드가 정상적으로 등록되었습니다.");
-						location.reload();
+					confirmed = false;
+					if(re > 0){
+						alert("세부 코드는 중복될 수 없습니다.\n다시 한번 확인해주시기 바랍니다.");
+						return false;
 					}else{
-						alert("예기치 못한 오류로 코드가 등록되지 못 했습니다.");
+						confirmed = true;
 					}
 				},
 				error: function(request, status, error){
@@ -187,7 +163,35 @@ $(function(){
 					console.log(error);
 				}
 			});
+			
+			console.log("----------- list ------------");
+			console.log(list);
+			console.log("confirmed:: " + confirmed);
+			
+			if(confirmed){
+				
+				$.ajax({
+					data: list,
+					url: "./registerDetailCode.ino",
+					datatype: "json",
+					contentType: "application/json; charset=UTF-8",  
+					type: "POST",
+					success: function(re){
+						if(re){
+							alert("코드가 정상적으로 등록되었습니다.");
+							location.reload();
+						}else{
+							alert("예기치 못한 오류로 코드가 등록되지 못 했습니다.");
+						}
+					},
+					error: function(request, status, error){
+						console.log(status);
+						console.log(error);
+					}
+				});
+			}
 		}
+		
 	});
 
 });

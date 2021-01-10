@@ -47,7 +47,7 @@ public class CommCodeService {
 			Map<String, Object> code = new HashMap<String, Object>();
 			code.put("codeList", codeList);
 			re += sqlSessionTemplate.insert("insertDecode", code);
-			System.out.println("SERVICE RE :: " + re);
+			System.out.println("SERVICE INSERT RE :: " + re);
 			transactionManager.commit(status);
 		}catch (Exception e) {
 			transactionManager.rollback(status);
@@ -55,19 +55,20 @@ public class CommCodeService {
 		return re;
 	}
 	
-//	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
-//	public int updateDetailCode(List<Map<String, Object>> updateCodeList){
-//		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
-//		int re = 0;
-//		try{
-//			Map<String, Object> code = new HashMap<String, Object>();
-//			code.put("updateCodeList", updateCodeList);
-//			re += sqlSessionTemplate.update("updateDecode", code);
-//			System.out.println("SERVICE RE :: " + re);
-//			transactionManager.commit(status);
-//		}catch (Exception e) {
-//			transactionManager.rollback(status);
-//		}
-//		return re;
-//	}
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
+	public int updateDetailCode(List<Map<String, Object>> codeList){
+		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
+		int re = 0;
+		System.out.println(codeList);
+		try{
+			for(Map<String, Object> code : codeList){
+				re += sqlSessionTemplate.update("updateDecode", code);
+			}
+			System.out.println("SERVICE UPDATE RE :: " + re);
+			transactionManager.commit(status);
+		}catch (Exception e) {
+			transactionManager.rollback(status);
+		}
+		return re;
+	}
 }

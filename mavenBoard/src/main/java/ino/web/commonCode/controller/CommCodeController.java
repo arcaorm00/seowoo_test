@@ -9,6 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,6 +30,8 @@ public class CommCodeController {
 	
 	@Autowired 
 	private CommCodeService commCodeService;
+	@Autowired
+	private PlatformTransactionManager transactionManager;
 	
 	@RequestMapping("/commonCode.ino")
 	public ModelAndView commonCode(HttpServletRequest req){
@@ -72,7 +79,7 @@ public class CommCodeController {
 	@RequestMapping(value="/registerDetailCode.ino")
 	@ResponseBody
 	public boolean registerDetailCode(HttpServletRequest request, 
-			@RequestBody List<Map<String, Object>> codeList) throws Exception{
+			@RequestBody List<Map<String, Object>> codeList){
 		boolean isInserted = false;
 		List<Map<String, Object>> insertList = new ArrayList<Map<String, Object>>();
 		List<Map<String, Object>> updateList = new ArrayList<Map<String, Object>>();
@@ -90,12 +97,20 @@ public class CommCodeController {
 		
 		System.out.println("insertList ::: " + insertList);
 		System.out.println("updateList ::: " + updateList);
-		
-		
+	
+		int re = 0;
+		if (insertList.size() > 0){
+			re += commCodeService.insertDetailCode(insertList);
+		}
+		if (updateList.size() > 0){
+			re += commCodeService.updateDetailCode(updateList);
+		}
+
+
 //		int re = commCodeService.insertDetailCode(codeList);
-//		if(re == codeList.size()){
-//			isInserted = true;
-//		}
+		if(re == codeList.size()){
+			isInserted = true;
+		}
 		return isInserted;
 	}
 	
