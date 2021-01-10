@@ -34,13 +34,16 @@ $(function(){
 		$("input[name='codeCheck']:checked").parent().each(function(){
 			var decodename = $(this).children("input[name='DECODE_NAME']");
 			var useyn = $(this).children("input[name='USE_YN']");
-
+			
+			// 이 부분 아직 해결 안 됨
 			var useynValue = null;
 			if ($(this).children("span").length <= 0){
+				console.log("SPAN 태그 없음!")
 				console.log(useyn.val());
 				useynValue = useyn.val();
+				
 			}else{
-				// 해결은 했는데 왜 $(this).children("input[name='USE_YN']:checked").val()은 undefined인지 이해 못함
+				console.log("SPAN 태그 존재!")
 				console.log($(this).children("span").children("input[name='USE_YN']:checked").val());		
 				useynValue = $(this).children("span").children("input[name='USE_YN']:checked").val();
 			}
