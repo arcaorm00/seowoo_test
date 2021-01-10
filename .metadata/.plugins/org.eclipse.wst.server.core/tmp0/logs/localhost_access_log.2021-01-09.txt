@@ -51,3 +51,10 @@
 127.0.0.1 - - [09/Jan/2021:14:01:54 +0900] "GET / HTTP/1.1" 404 950
 0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:01:56 +0900] "GET /mavenBoard/commonCodeDetail.ino?num=COM002 HTTP/1.1" 200 9579
 0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:02:00 +0900] "POST /mavenBoard/detailCodeIsExist.ino HTTP/1.1" 200 11
+127.0.0.1 - - [09/Jan/2021:14:03:14 +0900] "GET / HTTP/1.1" 404 950
+0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:03:18 +0900] "GET /mavenBoard/commonCodeDetail.ino?num=COM002 HTTP/1.1" 200 9579
+0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:03:29 +0900] "POST /mavenBoard/detailCodeIsExist.ino HTTP/1.1" 200 11
+0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:03:29 +0900] "POST /mavenBoard/registerDetailCode.ino HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:04:05 +0900] "GET /mavenBoard/commonCodeDetail.ino?num=COM002 HTTP/1.1" 200 9579
+0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:04:16 +0900] "POST /mavenBoard/detailCodeIsExist.ino HTTP/1.1" 200 11
+0:0:0:0:0:0:0:1 - - [09/Jan/2021:14:04:16 +0900] "POST /mavenBoard/registerDetailCode.ino HTTP/1.1" 200 15

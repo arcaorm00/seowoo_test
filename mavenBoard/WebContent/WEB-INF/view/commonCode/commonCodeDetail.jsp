@@ -18,7 +18,7 @@ $(function(){
 			var form = $("<form name='codeForm'  onsubmit='return false'></form>");
 			var flag = $("<input type='hidden' name='FLAG' value='I'/>");
 			var checkbox = $("<input type='checkbox' name='codeCheck' disabled='disabled' checked/>");
-			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"'/>");
+			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"' readonly/>");
 			var detailcode = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE'/>");
 			var decodename = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE_NAME'/>");
 			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 15px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
@@ -31,15 +31,43 @@ $(function(){
 	});
 	
 	$("#updateBtn").click(function(){
-		$("input[name='codeCheck']:checked").parent().each(function(idx, row){
-			var decodename = row[3];
-			var useYn = row[4];
+		$("input[name='codeCheck']:checked").parent().each(function(){
+			var decodename = $(this).children("input[name='DECODE_NAME']");
+			var useyn = $(this).children("input[name='USE_YN']");
+			
+			// 이 부분 아직 해결 안 됨
+			var useynValue = null;
+			if ($(this).children("span").length <= 0){
+				console.log("SPAN 태그 없음!")
+				console.log(useyn.val());
+				useynValue = useyn.val();
+				
+			}else{
+				console.log("SPAN 태그 존재!")
+				console.log($(this).children("input[name='USE_YN']:checked").val());
+				
+				useynValue = $(this).children("input[name='USE_YN']:checked").val();
+			}
+			
+			
+			var newUseYn = null;
+			if (useynValue == "Y"){
+				newUseYn = $("<span style='display: inline-block; width: 100px; margin-right: 8px;'><input type='radio' name='USE_YN' value='Y' checked/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
+			}else if (useynValue == "N"){
+				newUseYn = $("<span style='display: inline-block; width: 100px; margin-right: 8px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N' checked/>N</span>");
+			}
+			
+			useyn.remove();
+			$(this).children("span").remove();
+			$(this).append(newUseYn);
 			
 			var flag = $("<input type='hidden' name='FLAG' value='U'/>");
-			$(this).append(flag);
-			
-			decodename.disabled = false;
-			useYn.disabled = false;
+			if ($(this).children("input[name='FLAG']").length <= 0){
+				$(this).append(flag);
+			}
+
+			decodename.attr("disabled", false);
+			useyn.attr("disabled", false);
 		});
 	});
 	
@@ -53,10 +81,36 @@ $(function(){
 		
 		//$("form[name='codeForm']").each(function(){
 		$("input[name='codeCheck']:checked").parent().each(function(){
+			
+			var detailcode = $(this).children("input[name='DECODE']").val().trim();
+			var decodename = $(this).children("input[name='DECODE_NAME']").val().trim();
+			var useyn = $(this).children("input[name='USE_YN']");
+			
 			$(this).children("input[name='CODE']").attr("disabled", false);
 			$(this).children("input[name='DECODE']").attr("disabled", false);
+			
+			console.log(detailcode + "/" + decodename + "/" + useyn);
+			
+			// 입력 확인
+			if(detailcode == "" || decodename == "" || useyn == undefined){
+				alert("입력이 완료되지 않은 행이 있습니다.");
+				return;
+			}
+			if(detailcode == duplicated){
+				alert("세부 코드에 중복되는 값을 입력했습니다.");
+				return;
+			}
+			
+			duplicated = detailcode;
+			
 			var formData = $(this).serializeObject();
 			codeList.push(formData);
+			
+			if ($(this).children("input[name='FLAG']").val() != "I"){
+				$(this).children("input[name='CODE']").attr("disabled", true);
+				$(this).children("input[name='DECODE']").attr("disabled", true);
+			}
+			
 		});
 		//var formData = $("form[name='codeForm']").serializeObject();
 		
@@ -138,7 +192,6 @@ $(function(){
 				}
 			});
 		}
-		
 	});
 
 });

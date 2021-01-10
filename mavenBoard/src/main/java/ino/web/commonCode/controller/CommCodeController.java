@@ -74,9 +74,24 @@ public class CommCodeController {
 	public boolean registerDetailCode(HttpServletRequest request, 
 			@RequestBody List<Map<String, Object>> codeList) throws Exception{
 		boolean isInserted = false;
+		List<Map<String, Object>> insertList = new ArrayList<Map<String, Object>>();
+		List<Map<String, Object>> updateList = new ArrayList<Map<String, Object>>();
+		
 //		ObjectMapper mapper = new ObjectMapper();
 //		ArrayList<Map<String, Object>> list = mapper.readValue(newCodeList, ArrayList.class);
-		System.out.println("파싱 List: " + codeList);
+		
+		for (Map<String, Object> codeMap : codeList){
+			if (codeMap.get("FLAG").equals("I")){
+				insertList.add(codeMap);
+			}else if (codeMap.get("FLAG").equals("U")){
+				updateList.add(codeMap);
+			}
+		}
+		
+		System.out.println("insertList ::: " + insertList);
+		System.out.println("updateList ::: " + updateList);
+		
+		
 //		int re = commCodeService.insertDetailCode(codeList);
 //		if(re == codeList.size()){
 //			isInserted = true;
