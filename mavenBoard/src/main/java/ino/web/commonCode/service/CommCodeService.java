@@ -39,36 +39,28 @@ public class CommCodeService {
 		return sqlSessionTemplate.selectOne("isExistCode", map);
 	}
 	
-	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public int insertDetailCode(List<Map<String, Object>> codeList){
-		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
 		int re = 0;
-		try{
-			Map<String, Object> code = new HashMap<String, Object>();
-			code.put("codeList", codeList);
-			re += sqlSessionTemplate.insert("insertDecode", code);
-			System.out.println("SERVICE INSERT RE :: " + re);
-			transactionManager.commit(status);
-		}catch (Exception e) {
-			transactionManager.rollback(status);
-		}
+		re = sqlSessionTemplate.insert("insertDecode", codeList);
+		System.out.println("SERVICE INSERT RESULT :: " + re);
+
 		return re;
 	}
 	
-	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public int updateDetailCode(List<Map<String, Object>> codeList){
-		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
 		int re = 0;
-		System.out.println(codeList);
-		try{
-			for(Map<String, Object> code : codeList){
-				re += sqlSessionTemplate.update("updateDecode", code);
-			}
-			System.out.println("SERVICE UPDATE RE :: " + re);
-			transactionManager.commit(status);
-		}catch (Exception e) {
-			transactionManager.rollback(status);
+		for(Map<String, Object> code : codeList){
+			re += sqlSessionTemplate.update("updateDecode", code);
 		}
+		System.out.println("SERVICE UPDATE RESULT :: " + re);
+
+		return re;
+	}
+	
+	public int deleteDetailCode(List<Map<String, Object>> codeList){
+		int re = 0;
+		re = sqlSessionTemplate.delete("deleteDecode", codeList);
+		System.out.println("SERVICE DELETE RESULT :: " + re);
 		return re;
 	}
 }

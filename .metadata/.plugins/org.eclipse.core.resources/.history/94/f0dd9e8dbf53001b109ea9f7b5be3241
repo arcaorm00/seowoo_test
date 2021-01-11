@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ino.web.commonCode.mapper">
+	
+	<select id="selectCommonCodeList" resultType="java.util.HashMap">
+		SELECT * 
+		  FROM CODEM
+	</select>
+	
+	<select id="selectCode" resultType="java.util.HashMap">
+		SELECT M.CODE
+		     , M.CODE_NAME
+		     , D.DECODE
+		     , D.DECODE_NAME
+		     , D.USE_YN
+		  FROM CODEM M, CODED D 
+		 WHERE M.CODE = D.CODE 
+		   and M.CODE = #{ codeType } 
+		   and M.USE_YN = #{ useYn } 
+		   and D.USE_YN = #{ useYn }
+	</select>
+	
+	<select id="selectByCode" resultType="java.util.HashMap">
+		SELECT M.CODE
+		     , D.DECODE
+		     , D.DECODE_NAME
+		     , D.USE_YN
+		  FROM CODEM M, CODED D 
+		 WHERE M.CODE = D.CODE 
+		   and M.CODE = #{ codeType }
+	  ORDER BY D.DECODE DESC
+	</select>
+<!-- 	
+	<select id="isExistCode" resultType="int">
+		SELECT COUNT(DECODE) 
+		  FROM CODED
+		 WHERE CODE = #{ code }
+		   and DECODE = #{ decode }
+	</select>
+-->
+ 
+	<select id="isExistCode" resultType="int" parameterType="java.util.Map">
+		SELECT COUNT(DECODE) 
+		  FROM CODED
+		 WHERE CODE = #{ codeList[0].CODE }
+		   and (
+		   <foreach collection="codeList" item="code" index="i" separator=" or " >
+			   	DECODE = #{ code.DECODE } and #{ code.FLAG } != 'U' and #{ code.FLAG } != 'D'
+		   </foreach>
+		   )
+	</select>
+
+<!--
+	<insert id="insertDecode">
+		INSERT INTO CODED(
+				CODE, DECODE, DECODE_NAME, USE_YN
+			) VALUES
+	        ( #{ CODE }, #{ DECODE }, #{ DECODE_NAME }, #{ USE_YN } )
+	</insert>
+-->	
+	 
+	<insert id="insertDecode" parameterType="java.util.Map">
+		INSERT ALL
+		<foreach collection="codeList" item="code" separator=" " >
+			INTO CODED(
+				CODE, DECODE, DECODE_NAME, USE_YN
+			) VALUES
+	        ( #{ code.CODE }, #{ code.DECODE }, #{ code.DECODE_NAME }, #{ code.USE_YN } )
+    	</foreach>
+    	SELECT * FROM DUAL
+	</insert>
+	
+	<update id="updateDecode" parameterType="java.util.Map">
+		UPDATE CODED
+		   SET (DECODE_NAME, USE_YN) = (SELECT #{ DECODE_NAME }, #{ USE_YN } FROM DUAL)
+		 WHERE DECODE = #{ DECODE }
+	</update>
+	
+	<delete id="deleteDecode" parameterType="java.util.Map">
+		DELETE FROM CODED WHERE DECODE in
+		(
+		<foreach collection="codeList" item="code" separator=", ">
+			#{ code.DECODE }
+		</foreach>
+		)
+	</delete>
+	
+</mapper>

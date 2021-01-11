@@ -48,7 +48,7 @@
 		 WHERE CODE = #{ codeList[0].CODE }
 		   and (
 		   <foreach collection="codeList" item="code" index="i" separator=" or " >
-			   	DECODE = #{ code.DECODE } and #{ code.FLAG } != 'U'
+			   	DECODE = #{ code.DECODE } and #{ code.FLAG } != 'U' and #{ code.FLAG } != 'D'
 		   </foreach>
 		   )
 	</select>
@@ -62,9 +62,9 @@
 	</insert>
 -->	
 	 
-	<insert id="insertDecode" parameterType="java.util.Map">
+	<insert id="insertDecode" parameterType="java.util.List">
 		INSERT ALL
-		<foreach collection="codeList" item="code" separator=" " >
+		<foreach collection="list" item="code" separator=" " >
 			INTO CODED(
 				CODE, DECODE, DECODE_NAME, USE_YN
 			) VALUES
@@ -72,11 +72,30 @@
     	</foreach>
     	SELECT * FROM DUAL
 	</insert>
-	
+
+<!--	
+	<update id="updateDecode" parameterType="java.util.List">
+		<foreach item="code" collection="list" separator=";" open="DECLARE BEGIN" close="; END;">
+		    UPDATE CODED SET 
+		        DECODE_NAME = #{code.DECODE_NAME}, 
+		        USE_YN = #{ code.USE_YN } 
+		    WHERE DECODE = #{ code.DECODE }
+		</foreach>
+	</update>
+-->
 	<update id="updateDecode" parameterType="java.util.Map">
 		UPDATE CODED
 		   SET (DECODE_NAME, USE_YN) = (SELECT #{ DECODE_NAME }, #{ USE_YN } FROM DUAL)
 		 WHERE DECODE = #{ DECODE }
 	</update>
+	
+	<delete id="deleteDecode" parameterType="java.util.List">
+		DELETE FROM CODED WHERE DECODE in
+		(
+		<foreach collection="list" item="code" separator=", ">
+			#{ code.DECODE }
+		</foreach>
+		)
+	</delete>
 	
 </mapper>

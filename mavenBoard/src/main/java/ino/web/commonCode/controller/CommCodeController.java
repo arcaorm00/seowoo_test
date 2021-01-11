@@ -78,11 +78,16 @@ public class CommCodeController {
 	
 	@RequestMapping(value="/registerDetailCode.ino")
 	@ResponseBody
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public boolean registerDetailCode(HttpServletRequest request, 
 			@RequestBody List<Map<String, Object>> codeList){
 		boolean isInserted = false;
+		
+		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
+		
 		List<Map<String, Object>> insertList = new ArrayList<Map<String, Object>>();
 		List<Map<String, Object>> updateList = new ArrayList<Map<String, Object>>();
+		List<Map<String, Object>> deleteList = new ArrayList<Map<String, Object>>();
 		
 //		ObjectMapper mapper = new ObjectMapper();
 //		ArrayList<Map<String, Object>> list = mapper.readValue(newCodeList, ArrayList.class);
@@ -92,20 +97,31 @@ public class CommCodeController {
 				insertList.add(codeMap);
 			}else if (codeMap.get("FLAG").equals("U")){
 				updateList.add(codeMap);
+			}else if (codeMap.get("FLAG").equals("D")){
+				deleteList.add(codeMap);
 			}
 		}
 		
 		System.out.println("insertList ::: " + insertList);
 		System.out.println("updateList ::: " + updateList);
+		System.out.println("deleteList ::: " + deleteList);
 	
 		int re = 0;
-		if (insertList.size() > 0){
-			re += commCodeService.insertDetailCode(insertList);
+		
+		try{
+			if (insertList.size() > 0){
+				re += commCodeService.insertDetailCode(insertList);
+			}
+			if (updateList.size() > 0){
+				re += commCodeService.updateDetailCode(updateList);
+			}
+			if (deleteList.size() > 0){
+				re += commCodeService.deleteDetailCode(deleteList);
+			}
+			transactionManager.commit(status);
+		}catch (Exception e) {
+			transactionManager.rollback(status);
 		}
-		if (updateList.size() > 0){
-			re += commCodeService.updateDetailCode(updateList);
-		}
-
 
 //		int re = commCodeService.insertDetailCode(codeList);
 		if(re == codeList.size()){

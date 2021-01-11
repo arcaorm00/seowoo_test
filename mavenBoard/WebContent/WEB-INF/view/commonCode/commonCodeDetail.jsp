@@ -12,8 +12,9 @@ $(function(){
 	var code = $("#code").val();
 	var round = 0;
 	
+	// 추가
 	$("#addBtn").click(function(){
-		$("#insertBtn").attr("disabled", false);
+		$("#registerBtn").attr("disabled", false);
 		if (round < 3){
 			var form = $("<form name='codeForm'  onsubmit='return false'></form>");
 			var flag = $("<input type='hidden' name='FLAG' value='I'/>");
@@ -21,7 +22,7 @@ $(function(){
 			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"' readonly/>");
 			var detailcode = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE'/>");
 			var decodename = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE_NAME'/>");
-			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
+			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 11px; margin-right: 9px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
 			form.append(flag, checkbox, mastercode, detailcode, decodename, useyn);
 			$("#codeBoard").append(form);
 			round += 1;
@@ -30,14 +31,16 @@ $(function(){
 		}
 	});
 	
+	// 수정
 	$("#updateBtn").click(function(){
 		$("input[name='codeCheck']:checked").parent().each(function(){
-			if($(this).children("input[name='FLAG']").val() == "I"){
+			if($(this).children("input[name='FLAG']").val() == "I" || $(this).children("input[name='FLAG']").val() == "D"){
 				return;
 			}
 			var decodename = $(this).children("input[name='DECODE_NAME']");
-			var useyn = $(this).children("input[name='USE_YN']");
-
+			var useyn = $(this).find("input[name='USE_YN']");
+			
+			/*
 			var useynValue = null;
 			if ($(this).children("span").length <= 0){
 				console.log(useyn.val());
@@ -58,6 +61,7 @@ $(function(){
 			useyn.remove();
 			$(this).children("span").remove();
 			$(this).append(newUseYn);
+			*/
 			
 			var flag = $("<input type='hidden' name='FLAG' value='U'/>");
 			if ($(this).children("input[name='FLAG']").length <= 0){
@@ -66,13 +70,31 @@ $(function(){
 
 			decodename.attr("disabled", false);
 			useyn.attr("disabled", false);
+			$("#registerBtn").attr("disabled", false);
 		});
 	});
+	
+	// 삭제
+	$("#deleteBtn").click(function(){
+		$("input[name='codeCheck']:checked").parent().each(function(){
+			if($(this).children("input[name='FLAG']").length > 0){
+				return;
+			}
+			$(this).find("input[name='FLAG']").remove();
+			var flag = $("<input type='hidden' name='FLAG' value='D'/>");
+			$(this).append(flag);
+			$(this).children().css("text-decoration", "line-through");
+			$("#registerBtn").attr("disabled", false);
+		});
+	});
+	
 	
 	var confirmed = false;
 	$("#registerBtn").click(function(){
 		var codeList = [];
 		var duplicated = "";
+		var msg = "";
+		var cnt = $("input[name='codeCheck']:checked").parent().length;
 		confirmed = false;
 		
 		//$("form[name='codeForm']").each(function(){
@@ -80,7 +102,7 @@ $(function(){
 			
 			var detailcode = $(this).children("input[name='DECODE']").val().trim();
 			var decodename = $(this).children("input[name='DECODE_NAME']").val().trim();
-			var useyn = $(this).children("input[name='USE_YN']");
+			var useyn = $(this).find("input[name='USE_YN']:checked").val();
 			
 			$(this).children("input[name='CODE']").attr("disabled", false);
 			$(this).children("input[name='DECODE']").attr("disabled", false);
@@ -89,13 +111,13 @@ $(function(){
 			
 			// 입력 확인
 			if(detailcode == "" || decodename == "" || useyn == undefined){
-				alert("입력이 완료되지 않은 행이 있습니다.");
+				msg = "입력이 완료되지 않은 행이 있습니다.";
 				confirmed = false;
 			}else if(detailcode == duplicated){
-				alert("세부 코드에 중복되는 값을 입력했습니다.");
+				msg = "세부 코드에 중복되는 값을 입력했습니다.";
 				confirmed = false;
 			}else {
-				confirmed = true;
+				cnt -= 1;
 			}
 			
 			duplicated = detailcode;
@@ -109,33 +131,10 @@ $(function(){
 			}
 			
 		});
-		//var formData = $("form[name='codeForm']").serializeObject();
 		
-		/*
-		for(var i = 0; i < round; i++){
-			var detailcode = $("#detailcode"+i).val().trim();
-			var decodename = $("#decodename"+i).val().trim();
-			var useyn = $("input[name=useYnRadio"+i+"]:checked").val();
-			
-			// 입력 확인
-			if(detailcode == "" && decodename == "" && useyn == undefined){
-				continue;
-			}
-			if(detailcode == "" || decodename == "" || useyn == undefined){
-				alert("입력이 완료되지 않은 행이 있습니다.");
-				return;
-			}
-			if(detailcode == duplicated){
-				alert("세부 코드에 중복되는 값을 입력했습니다.");
-				return;
-			}
-			
-			duplicated = detailcode;
-			
-			var row = {CODE: code, DECODE: detailcode, DECODE_NAME: decodename, USE_YN: useyn};
-			codeList.push(row);
+		if (cnt == 0){
+			confirmed = true;
 		}
-		*/
 		
 		if (confirmed){
 			console.log(codeList);
@@ -176,6 +175,7 @@ $(function(){
 					datatype: "json",
 					contentType: "application/json; charset=UTF-8",  
 					type: "POST",
+					transactional: true,
 					success: function(re){
 						if(re){
 							alert("코드가 정상적으로 등록되었습니다.");
@@ -190,6 +190,8 @@ $(function(){
 					}
 				});
 			}
+		}else{
+			alert(msg);
 		}
 		
 	});
@@ -235,7 +237,8 @@ $.fn.serializeObject = function() {
 					<div style="width:650px;" align="right">
 						<button id="addBtn" name="addBtn">추가</button>
 						<button id="updateBtn" name="updateBtn">수정</button>
-						<button id="registerBtn" name="registerBtn">등록</button>
+						<button id="deleteBtn" name="deleteBtn">삭제</button>
+						<button id="registerBtn" name="registerBtn" disabled>등록</button>
 					</div>
 					<hr style="width: 600px;">
 					<div style="padding-bottom: 10px;">
@@ -260,7 +263,10 @@ $.fn.serializeObject = function() {
 								<input type='text' style='width: 100px;' name='CODE' value="${ nRow.CODE }" disabled="disabled"/>
 								<input type='text' style='width: 170px;' name='DECODE' value="${ nRow.DECODE }" disabled="disabled"/>
 								<input type='text' style='width: 170px;' name='DECODE_NAME' value="${ nRow.DECODE_NAME }" disabled="disabled"/>
-								<input type='text' style='width: 100px;' name='USE_YN' value="${ nRow.USE_YN }" disabled="disabled"/>
+								<!-- <input type='text' style='width: 100px;' name='USE_YN' value="${ nRow.USE_YN }" disabled="disabled"/>-->
+								<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'>
+									<input type='radio' name='USE_YN' value='Y' <c:if test="${ nRow.USE_YN eq 'Y' }">checked</c:if> disabled="disabled"/>Y<input type='radio' name='USE_YN' value='N' <c:if test="${ nRow.USE_YN eq 'N' }">checked</c:if> disabled="disabled"/>N
+									</span>
 							</form>
 						</c:forEach>
 					</div>
