@@ -22,7 +22,8 @@ $(function(){
 			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"' readonly/>");
 			var detailcode = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE'/>");
 			var decodename = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE_NAME'/>");
-			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 11px; margin-right: 9px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
+			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 11px; margin-right: 9px;'>"
+			+"<input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
 			form.append(flag, checkbox, mastercode, detailcode, decodename, useyn);
 			$("#codeBoard").append(form);
 			round += 1;
@@ -227,52 +228,51 @@ $.fn.serializeObject = function() {
 
 	<div id="bodyAll" align="center" style="width: 800px;">
 		<div class="contents" style="width: 800px; margin: 0;">
-			 <section>
-                <div style="background-color:#dedede; height:700px; padding: 20px;">
-				
-					<div>
-						<h1>세부 코드 등록</h1>
-					</div>
-					<input type="hidden" id="code" value="${ code }"/>
-					<div style="width:650px;" align="right">
-						<button id="addBtn" name="addBtn">추가</button>
-						<button id="updateBtn" name="updateBtn">수정</button>
-						<button id="deleteBtn" name="deleteBtn">삭제</button>
-						<button id="registerBtn" name="registerBtn" disabled>등록</button>
-					</div>
-					<hr style="width: 600px;">
-					<div style="padding-bottom: 10px;">
-						<table border="1">
-							<thead>
-								<tr>
-									<td style="width: 20px;" align="center"></td>
-									<td style="width: 100px;" align="center">기준 코드</td>
-									<td style="width: 180px;" align="center">세부 코드</td>
-									<td style="width: 180px;" align="center">코드 이름</td>
-									<td style="width: 100px;" align="center">사용여부</td>
-								</tr>
-							</thead>
-						</table>
-					</div>
-					<hr style="width: 600px;">
-				
-					<div id="codeBoard">
-						<c:forEach var="nRow" items="${ list }">
-							<form name="codeForm" onsubmit="return false">
-								<input type="checkbox" name="codeCheck" value="${ nRow.DECODE }"/>
-								<input type='text' style='width: 100px;' name='CODE' value="${ nRow.CODE }" disabled="disabled"/>
-								<input type='text' style='width: 170px;' name='DECODE' value="${ nRow.DECODE }" disabled="disabled"/>
-								<input type='text' style='width: 170px;' name='DECODE_NAME' value="${ nRow.DECODE_NAME }" disabled="disabled"/>
-								<!-- <input type='text' style='width: 100px;' name='USE_YN' value="${ nRow.USE_YN }" disabled="disabled"/>-->
-								<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'>
-									<input type='radio' name='USE_YN' value='Y' <c:if test="${ nRow.USE_YN eq 'Y' }">checked</c:if> disabled="disabled"/>Y<input type='radio' name='USE_YN' value='N' <c:if test="${ nRow.USE_YN eq 'N' }">checked</c:if> disabled="disabled"/>N
-									</span>
-							</form>
-						</c:forEach>
-					</div>
-		
-				 </div>
-	        </section>
+               <div style="background-color:#dedede; height:700px; padding: 20px;">
+			
+				<div>
+					<h1>세부 코드 등록</h1>
+				</div>
+				<input type="hidden" id="code" value="${ code }"/>
+				<div style="width:650px;" align="right">
+					<button id="addBtn" name="addBtn">추가</button>
+					<button id="updateBtn" name="updateBtn">수정</button>
+					<button id="deleteBtn" name="deleteBtn">삭제</button>
+					<button id="registerBtn" name="registerBtn" disabled>등록</button>
+				</div>
+				<hr style="width: 600px;">
+				<div style="padding-bottom: 10px;">
+					<table border="1">
+						<thead>
+							<tr>
+								<td style="width: 20px;" align="center"></td>
+								<td style="width: 100px;" align="center">기준 코드</td>
+								<td style="width: 180px;" align="center">세부 코드</td>
+								<td style="width: 180px;" align="center">코드 이름</td>
+								<td style="width: 100px;" align="center">사용여부</td>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<hr style="width: 600px;">
+			
+				<div id="codeBoard">
+					<c:forEach var="nRow" items="${ list }">
+						<form name="codeForm" onsubmit="return false">
+							<input type="checkbox" name="codeCheck" value="${ nRow.DECODE }"/>
+							<input type='text' style='width: 100px;' name='CODE' value="${ nRow.CODE }" disabled="disabled"/>
+							<input type='text' style='width: 170px;' name='DECODE' value="${ nRow.DECODE }" disabled="disabled"/>
+							<input type='text' style='width: 170px;' name='DECODE_NAME' value="${ nRow.DECODE_NAME }" disabled="disabled"/>
+							<!-- <input type='text' style='width: 100px;' name='USE_YN' value="${ nRow.USE_YN }" disabled="disabled"/>-->
+							<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'>
+								<input type='radio' name='USE_YN' value='Y' <c:if test="${ nRow.USE_YN eq 'Y' }">checked</c:if> disabled="disabled"/>Y
+								<input type='radio' name='USE_YN' value='N' <c:if test="${ nRow.USE_YN eq 'N' }">checked</c:if> disabled="disabled"/>N
+								</span>
+						</form>
+					</c:forEach>
+				</div>
+	
+			 </div>
 		</div>
 	</div>
 	

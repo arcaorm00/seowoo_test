@@ -22,8 +22,7 @@ $(function(){
 			var mastercode = $("<input type='text' style='width: 100px; margin-left: 6px;' name='CODE' value='"+code+"' readonly/>");
 			var detailcode = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE'/>");
 			var decodename = $("<input type='text' style='width: 170px; margin-left: 6px;' name='DECODE_NAME'/>");
-			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 11px; margin-right: 9px;'>"
-			+"<input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
+			var useyn = $("<span style='display: inline-block; width: 100px; margin-left: 11px; margin-right: 9px;'><input type='radio' name='USE_YN' value='Y'/>Y<input type='radio' name='USE_YN' value='N'/>N</span>");
 			form.append(flag, checkbox, mastercode, detailcode, decodename, useyn);
 			$("#codeBoard").append(form);
 			round += 1;
@@ -265,8 +264,7 @@ $.fn.serializeObject = function() {
 							<input type='text' style='width: 170px;' name='DECODE_NAME' value="${ nRow.DECODE_NAME }" disabled="disabled"/>
 							<!-- <input type='text' style='width: 100px;' name='USE_YN' value="${ nRow.USE_YN }" disabled="disabled"/>-->
 							<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'>
-								<input type='radio' name='USE_YN' value='Y' <c:if test="${ nRow.USE_YN eq 'Y' }">checked</c:if> disabled="disabled"/>Y
-								<input type='radio' name='USE_YN' value='N' <c:if test="${ nRow.USE_YN eq 'N' }">checked</c:if> disabled="disabled"/>N
+								<input type='radio' name='USE_YN' value='Y' <c:if test="${ nRow.USE_YN eq 'Y' }">checked</c:if> disabled="disabled"/>Y<input type='radio' name='USE_YN' value='N' <c:if test="${ nRow.USE_YN eq 'N' }">checked</c:if> disabled="disabled"/>N
 								</span>
 						</form>
 					</c:forEach>
