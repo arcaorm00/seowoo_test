@@ -1,0 +1,45 @@
+package ino.web.authorityTable.dto;
+
+import org.apache.ibatis.type.Alias;
+
+@Alias("authorityDto")
+public class AuthorityDto {
+
+	private String groupId;
+	private String groupName;
+	private String useYn;
+	
+	public AuthorityDto() {
+		super();
+	}
+	
+	public AuthorityDto(String groupId, String groupName, String useYn) {
+		this.groupId = groupId;
+		this.groupName = groupName;
+		this.useYn = useYn;
+	}
+	
+	public String getGroupId() {
+		return groupId;
+	}
+	public void setGroupId(String groupId) {
+		this.groupId = groupId;
+	}
+	public String getGroupName() {
+		return groupName;
+	}
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+	public String getUseYn() {
+		return useYn;
+	}
+	public void setUseYn(String useYn) {
+		this.useYn = useYn;
+	}
+	
+	@Override
+	public String toString() {
+		return "AuthorityDto [groupId=" + groupId + ", groupName=" + groupName + ", useYn=" + useYn + "]";
+	}
+}

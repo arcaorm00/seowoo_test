@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>
+		<h1>세부 코드 등록</h1>
+	</div>
+	<input type="hidden" id="code" value="${ code }"/>
+	<div style="width: 100%;" align="right">
+		<button id="registerBtn" name="registerBtn">등록</button>
+	</div>
+	<hr style="width: 600px;">
+	<div style="padding-bottom: 10px;">
+		<table border="1">
+			<thead>
+				<tr>
+					<td style="width: 20px;" align="center"></td>
+					<td style="width: 100px;" align="center">OBJID</td>
+					<td style="width: 180px;" align="center">OBJNAME</td>
+					<td style="width: 180px;" align="center">DEPT</td>
+					<td style="width: 100px;" align="center">사용여부</td>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<hr style="width: 600px;">
+
+	<div id="authorityDiv">
+		<table border="1">
+			<tbody>			
+				<c:forEach var="nRow" items="${ list }">
+					<tr>
+						<td style="width: 20px;" align="center"><input type="checkbox" name="objCheck"/></td>
+						<td style="width: 100px;" align="center" class="objId">${ nRow.objId }</td>
+						<td style="width: 180px;" align="center" class="objName">${ nRow.objName }</td>
+						<td style="width: 180px;" align="center" class="dept">${ nRow.dept }</td>
+						<td style="width: 100px;" align="center" class="useYn">${ nRow.useYn }</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

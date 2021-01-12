@@ -1,0 +1,39 @@
+package ino.web.authorityTable.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import ino.web.authorityTable.dto.AuthorityDto;
+import ino.web.authorityTable.service.AuthorityService;
+
+@Controller
+public class AuthorityController {
+
+	@Autowired
+	private AuthorityService authorityService;
+	
+	@RequestMapping("/authorityMain.ino")
+	public ModelAndView authorityTableMain(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("authorityTableMain");	
+		mav.addObject("list", authorityService.getGroupList());
+		return mav;
+	}
+	
+	@RequestMapping("/authorityDetail.ino")
+	public ModelAndView authorityTableDetail(@RequestParam String check){
+		ModelAndView mav = new ModelAndView("authorityTableDetail");
+		
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("groupId", check);
+		List<AuthorityDto> list = authorityService.getMappingListByGroupId(map);
+		return mav;
+	}
+}

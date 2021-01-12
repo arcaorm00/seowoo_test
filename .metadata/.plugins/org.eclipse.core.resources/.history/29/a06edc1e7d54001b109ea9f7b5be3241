@@ -1,0 +1,13 @@
+package ino.web.authorityTable.dto;
+
+import org.apache.ibatis.type.Alias;
+
+@Alias("authorityDto")
+public class AuthorityDto {
+
+	private String groupId;
+	private String groupName;
+	private String useYn;
+	
+	
+}

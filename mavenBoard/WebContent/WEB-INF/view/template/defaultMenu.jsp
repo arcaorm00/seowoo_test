@@ -11,7 +11,7 @@
 	<ul>
 		<li><a href="./main.ino">메인</a></li>
 		<li><a href="./commonCode.ino">공통코드</a></li>
-		<li>test3</li>
+		<li><a href="./authorityMain.ino">권한 체크</a></li>
 		<li>test4</li>
 		<li>test5</li>
 	</ul>

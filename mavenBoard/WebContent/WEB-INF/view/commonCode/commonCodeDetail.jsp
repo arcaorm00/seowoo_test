@@ -267,7 +267,7 @@ $.fn.serializeObject = function() {
 							<span style='display: inline-block; width: 100px; margin-left: 6px; margin-right: 8px;'>
 								<input type='radio' name='USE_YN' value='Y' <c:if test="${ nRow.USE_YN eq 'Y' }">checked</c:if> disabled="disabled"/>Y
 								<input type='radio' name='USE_YN' value='N' <c:if test="${ nRow.USE_YN eq 'N' }">checked</c:if> disabled="disabled"/>N
-								</span>
+							</span>
 						</form>
 					</c:forEach>
 				</div>

@@ -1,0 +1,5 @@
+package ino.web.authorityTable.service;
+
+public class AuthorityService {
+
+}
