@@ -36,57 +36,54 @@ public class AuthorityController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("authorityTableMain");	
 		mav.addObject("list", authorityService.getGroupList());
+		System.out.println("authorityService.getGroupList() ::: " + authorityService.getGroupList());
 		return mav;
 	}
 	
 	@RequestMapping("/authorityDetail.ino")
 	@ResponseBody
-	public List<AuthorityDto> authorityTableDetail(@RequestParam String groupId){
+	public Map<String, Object> authorityTableDetail(@RequestParam String groupId){
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("groupId", groupId);
-		List<AuthorityDto> objectList = authorityService.selectObjectTableList();
-		List<AuthorityDto> mappingList = authorityService.selectMappingTableListByGroupId(map);
+		List<Map<String, Object>> objectList = authorityService.selectObjectTableList();
+		List<Map<String, Object>> mappingList = authorityService.selectMappingTableListByGroupId(map);
 		
-		for (AuthorityDto authorityDto : objectList){
-			if (mappingList.size() <= 0){
-				authorityDto.setUseYn("미사용");
-			}else{
-				for (AuthorityDto mappingDto : mappingList){
-					if (authorityDto.getObjId().toString().equals(mappingDto.getObjId().toString())){
-						authorityDto.setUseYn("사용중");
-					}else if (!authorityDto.getObjId().toString().equals(mappingDto.getObjId().toString()) && authorityDto.getUseYn() == null){
-						authorityDto.setUseYn("미사용");
-					}
-				}
-			}
-			
-		}
-		return objectList;
+//		for (AuthorityDto authorityDto : objectList){
+//			if (mappingList.size() <= 0){
+//				authorityDto.setUseYn("미사용");
+//			}else{
+//				for (AuthorityDto mappingDto : mappingList){
+//					if (authorityDto.getObjId().toString().equals(mappingDto.getObjId().toString())){
+//						authorityDto.setUseYn("사용중");
+//					}else if (!authorityDto.getObjId().toString().equals(mappingDto.getObjId().toString()) && authorityDto.getUseYn() == null){
+//						authorityDto.setUseYn("미사용");
+//					}
+//				}
+//			}
+//			
+//		}
+		
+		map.put("objectList", objectList);
+		map.put("mappingList", mappingList);
+		return map;
 	}
 	
 	@RequestMapping("/registerMappingTable.ino")
 	@ResponseBody
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
-	public boolean registerMappingTable(HttpServletRequest request, @RequestBody List<Map<String, Object>> list){
+	public boolean registerMappingTable(HttpServletRequest request, 
+			@RequestBody Map<String, List<Map<String, Object>>> parameterMap){
 		
 		boolean isRegisted = false;
 		int re = 0;
 		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
 		
-		List<Map<String, Object>> insertList = new ArrayList<Map<String,Object>>();
-		List<Map<String, Object>> deleteList = new ArrayList<Map<String, Object>>();
+		System.out.println("INSERT LIST ::: " + parameterMap.get("insertList"));
+		System.out.println("DELETE LIST ::: " + parameterMap.get("deleteList"));
 		
-		for (Map<String, Object> authority : list){
-			if (authority.get("FLAG").equals("I")){
-				insertList.add(authority);
-			}else if (authority.get("FLAG").equals("D")){
-				deleteList.add(authority);
-			}
-		}
-		
-		System.out.println("INSERT LIST ::: " + insertList);
-		System.out.println("DELETE LIST ::: " + deleteList);
+		List<Map<String, Object>> insertList = parameterMap.get("insertList");
+		List<Map<String, Object>> deleteList = parameterMap.get("deleteList");
 		
 		try{
 			if (insertList.size() > 0){
@@ -100,7 +97,7 @@ public class AuthorityController {
 			transactionManager.rollback(status);
 		}
 		
-		if (list.size() != 0 && re == list.size()){
+		if (re == (insertList.size() + deleteList.size())){
 			isRegisted = true;
 		}
 		return isRegisted;

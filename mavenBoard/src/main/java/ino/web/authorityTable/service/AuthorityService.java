@@ -15,15 +15,15 @@ public class AuthorityService {
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
 	
-	public List<AuthorityDto> getGroupList(){
+	public List<Map<String, Object>> getGroupList(){
 		return sqlSessionTemplate.selectList("selectGroupTableList");
 	}
 
-	public List<AuthorityDto> selectObjectTableList() {
+	public List<Map<String, Object>> selectObjectTableList() {
 		return sqlSessionTemplate.selectList("selectObjectTableList");
 	}
 	
-	public List<AuthorityDto> selectMappingTableListByGroupId(Map<String, Object> map){
+	public List<Map<String, Object>> selectMappingTableListByGroupId(Map<String, Object> map){
 		return sqlSessionTemplate.selectList("selectMappingTableListByGroupId", map);
 	}
 	

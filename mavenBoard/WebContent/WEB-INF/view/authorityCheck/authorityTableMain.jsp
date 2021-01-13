@@ -94,7 +94,7 @@ var groupId = null;
 var groupName = null;
 var groupUseYn = null;
 
-function showModel(id, name, useyn){
+function showModal(id, name, useyn){
 	
 	console.log(id);
 	groupId = id;
@@ -112,25 +112,40 @@ function changeRowColor(checkBox){
 }
 
 function drawTable(groupId){
+	// objList , mappingList (2중 for문)
 	$.ajax({
 		data: {groupId: groupId},
 		url: "./authorityDetail.ino",
 		success: function(res){
 			$("#authorityTbody").empty();
-			for (var i = 0 ; i < res.length ; i++){
-				var nRow = res[i];
+			var mappingList = res.mappingList;
+			var objectList = res.objectList;
+
+			for (var i = 0 ; i < objectList.length ; i++){
+				var objectRow = objectList[i];
 
 				var tr = $("<tr></tr>");
 				var checkBox = null;
-				if (nRow.useYn == '사용중'){
-					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck' onClick='changeRowColor(this);' checked='checked'/></td>");
-				}else{
+				var useYn = null;
+				if (mappingList.length <= 0){
 					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' onClick='changeRowColor(this);' name='objCheck'/></td>");
+					useYn = $("<td style='width: 120px;' align='center' class='useYn'>미사용</td>");
+				}else{
+					mappingList.forEach(function(mappingRow, idx){
+						if (objectRow.OBJID == mappingRow.OBJID){
+							checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck' onClick='changeRowColor(this);' checked='checked'/></td>");
+							useYn = $("<td style='width: 120px;' align='center' class='useYn'>사용중</td>");
+						}else if (objectRow.OBJID != mappingRow.OBJID && useYn == null){
+							checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' onClick='changeRowColor(this);' name='objCheck'/></td>");
+							useYn = $("<td style='width: 120px;' align='center' class='useYn'>미사용</td>");
+						}
+					});
 				}
-				var objId = $("<td style='width: 160px;' align='center' class='objId'>" + nRow.objId + "</td>");
-				var objName = $("<td style='width: 180px;' align='center' class='objName'>" + nRow.objName + "</td>");
-				var dept = $("<td style='width: 100px;' align='center' class='dept'>" + nRow.dept + "</td>");
-				var useYn = $("<td style='width: 120px;' align='center' class='useYn'>" + nRow.useYn + "</td>");
+				
+				var objId = $("<td style='width: 160px;' align='center' class='objId'>" + objectRow.OBJID + "</td>");
+				var objName = $("<td style='width: 180px;' align='center' class='objName'>" + objectRow.OBJNAME + "</td>");
+				var dept = $("<td style='width: 100px;' align='center' class='dept'>" + objectRow.DEPT + "</td>");
+				
 
 				tr.append(checkBox, objId, objName, dept, useYn);
 				$("#authorityTbody").append(tr);
@@ -146,26 +161,29 @@ $(function(){
 	});
 	
 	$("#registerBtn").click(function(){
-		var list = [];
+		var insertList = [];
+		var deleteList = [];
 		$("input[name=objCheck]").each(function(){
 			var objId = $(this).parents("tr").children(".objId").text();
 			var objName = $(this).parents("tr").children(".objName").text();
 			var dept = $(this).parents("tr").children(".dept").text();
 			
 			if($(this).is(":checked") && $(this).parents("tr").children(".useYn").text() == "미사용"){
-				var row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept, FLAG: 'I'}
-				list.push(row);
+				var row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
+				insertList.push(row);
 			}else if(!$(this).is(":checked") && $(this).parents("tr").children(".useYn").text() == "사용중"){
-				var row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept, FLAG: 'D'}
-				list.push(row);
+				var row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
+				deleteList.push(row);
 			}
 		});
 		
-		if (list.length == 0){
+		if (insertList.length == 0 && deleteList.length == 0){
 			alert("수정된 정보가 없습니다.");
 		}else{
+			
+			var parameterMap = {insertList: insertList, deleteList: deleteList};
 			$.ajax({
-				data: JSON.stringify(list),
+				data: JSON.stringify(parameterMap),
 				url: "./registerMappingTable.ino",
 				datatype: "json",
 				async: false,
@@ -208,9 +226,9 @@ $(function(){
 		<tbody>
 			<c:forEach var="nRow" items="${ list }">
 				<tr align="center">
-					<td style="width: 100px;">${ nRow.groupId }</td>
-					<td style="width: 100px;"><a href="#" onClick="showModel('${nRow.groupId}', '${ nRow.groupName }', '${ nRow.useYn }');">${ nRow.groupName }</a></td>
-					<td style="width: 100px;">${ nRow.useYn }</td>
+					<td style="width: 100px;">${ nRow.GROUPID }</td>
+					<td style="width: 100px;"><a href="#" onClick="showModal('${nRow.GROUPID}', '${ nRow.GROUPNAME }', '${ nRow.USEYN }');">${ nRow.GROUPNAME }</a></td>
+					<td style="width: 100px;">${ nRow.USEYN }</td>
 				</tr>
 			</c:forEach>
 		</tbody>

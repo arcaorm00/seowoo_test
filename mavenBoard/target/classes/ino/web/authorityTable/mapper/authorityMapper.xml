@@ -4,18 +4,18 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="AuthorityMapper">
-	<select id="selectGroupTableList" resultType="authorityDto" >
+	<select id="selectGroupTableList" resultType="java.util.Map" >
 		 SELECT GROUPID, GROUPNAME, USE_YN AS USEYN
 		   FROM GROUPTABLE
 		  WHERE USE_YN = 'Y'
 	</select>
 	
-	<select id="selectObjectTableList" resultType="authorityDto">
+	<select id="selectObjectTableList" resultType="java.util.Map">
 		SELECT OBJID, OBJNAME, DEPT 
 		  FROM OBJECTTABLE
 	</select>
 	
-	<select id="selectMappingTableListByGroupId" resultType="authorityDto">
+	<select id="selectMappingTableListByGroupId" resultType="java.util.Map">
 		SELECT OBJID, OBJNAME, DEPT 
 		  FROM MAPPINGTABLE
 		 WHERE GROUPID = #{ groupId }
