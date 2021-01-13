@@ -27,7 +27,11 @@ public class AuthorityService {
 		return sqlSessionTemplate.selectList("selectMappingTableListByGroupId", map);
 	}
 	
-	public int insertMappingTable(List<AuthorityDto> list){
+	public int insertMappingTable(List<Map<String, Object>> list){
 		return sqlSessionTemplate.insert("insertMappingTable", list);
+	}
+	
+	public int deleteMappingTable(List<Map<String, Object>> list){
+		return sqlSessionTemplate.delete("deleteMappingTable", list);
 	}
 }

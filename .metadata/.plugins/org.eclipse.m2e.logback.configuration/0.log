@@ -15832,3 +15832,655 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2021-01-12 15:47:58,138 [Worker-1294] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
 2021-01-12 15:47:58,138 [Worker-1294] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-01-12 15:47:58,138 [Worker-1294] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:06:53,744 [Worker-1303] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:06:53,744 [Worker-1303] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:06:53,745 [Worker-1303] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:06:53,746 [Worker-1303] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:07:13,897 [Worker-1272] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:07:13,897 [Worker-1272] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:07:13,898 [Worker-1272] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:07:13,898 [Worker-1272] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:07:17,488 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:07:17,489 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:07:17,489 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:07:17,489 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:08:06,984 [Worker-1277] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:08:06,984 [Worker-1277] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:08:06,984 [Worker-1277] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:08:06,984 [Worker-1277] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:09:41,498 [Worker-1296] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:09:41,498 [Worker-1296] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:09:41,499 [Worker-1296] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:09:41,499 [Worker-1296] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:09:55,411 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:09:55,411 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:09:55,412 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:09:55,412 [Worker-1298] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:10:00,856 [Worker-1300] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:10:00,857 [Worker-1300] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:10:00,858 [Worker-1300] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:10:00,858 [Worker-1300] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:15:50,953 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:15:50,953 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:15:50,953 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:15:50,954 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:20:56,185 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:20:56,185 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:20:56,186 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:20:56,186 [Worker-1305] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:21:08,728 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:21:08,728 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:21:08,729 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:21:08,729 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:21:42,168 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:21:42,169 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:21:42,170 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:21:42,170 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:22:10,631 [Worker-1314] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:22:10,631 [Worker-1314] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:22:10,632 [Worker-1314] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:22:10,632 [Worker-1314] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:22:29,320 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:22:29,322 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:22:29,322 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:22:29,322 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:22:49,399 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:22:49,399 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:22:49,400 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:22:49,400 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:23:20,946 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:23:20,946 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:23:20,947 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:23:20,947 [Worker-1315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:25:00,750 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:25:00,750 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:25:00,752 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:25:00,752 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:25:53,300 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:25:53,301 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:25:53,302 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:25:53,302 [Worker-1311] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:26:27,198 [Worker-1316] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:26:27,198 [Worker-1316] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:26:27,199 [Worker-1316] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:26:27,199 [Worker-1316] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:28:47,241 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:28:47,241 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:28:47,242 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:28:47,242 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:29:12,647 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:29:12,647 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:29:12,648 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:29:12,648 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:29:20,889 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:29:20,889 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:29:20,890 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:29:20,890 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:29:29,690 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:29:29,690 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:29:29,691 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:29:29,691 [Worker-1319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:32:19,760 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:32:19,761 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:32:19,761 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:32:19,762 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:32:56,901 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:32:56,901 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:32:56,902 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:32:56,902 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:34:14,946 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:34:14,947 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:34:14,948 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:34:14,948 [Worker-1318] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:34:54,820 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:34:54,820 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:34:54,821 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:34:54,821 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:36:02,954 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:36:02,954 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:36:02,955 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:36:02,955 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:36:25,402 [Worker-1326] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:36:25,402 [Worker-1326] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:36:25,403 [Worker-1326] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:36:25,403 [Worker-1326] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:37:09,218 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:37:09,219 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:37:09,220 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:37:09,220 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:37:13,521 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:37:13,521 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:37:13,521 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:37:13,522 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:38:01,257 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:01,257 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:38:01,258 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:01,258 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:38:25,004 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:25,004 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:38:25,005 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:25,005 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:38:35,918 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:35,919 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:38:35,919 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:35,919 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:38:48,856 [Worker-1327] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:48,856 [Worker-1327] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:38:48,857 [Worker-1327] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:48,857 [Worker-1327] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:38:59,417 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:59,418 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:38:59,419 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:38:59,419 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:39:10,320 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:39:10,320 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:39:10,321 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:39:10,321 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:39:35,170 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:39:35,171 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:39:35,172 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:39:35,172 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:39:59,100 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:39:59,100 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:39:59,101 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:39:59,101 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:40:45,740 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:40:45,740 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:40:45,741 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:40:45,742 [Worker-1322] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:41:21,318 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:41:21,318 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:41:21,319 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:41:21,319 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:41:31,873 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:41:31,873 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:41:31,874 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:41:31,874 [Worker-1312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:41:38,020 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:41:38,020 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:41:38,021 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:41:38,021 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:42:11,618 [Worker-1328] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:42:11,618 [Worker-1328] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:42:11,619 [Worker-1328] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:42:11,619 [Worker-1328] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:42:43,168 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:42:43,168 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:42:43,169 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:42:43,169 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-12 21:43:14,523 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:43:14,524 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-12 21:43:14,524 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-12 21:43:14,524 [Worker-1323] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:52:12,529 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:52:12,529 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:52:12,529 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:52:12,529 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:52:22,817 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:52:22,817 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:52:22,817 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:52:22,817 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:53:06,503 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:53:06,503 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:53:06,504 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:53:06,504 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:53:36,714 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:53:36,714 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:53:36,715 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:53:36,715 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:54:06,548 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:54:06,548 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:54:06,549 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:54:06,549 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:54:17,668 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:54:17,668 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:54:17,669 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:54:17,669 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:55:21,397 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:55:21,397 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:55:21,397 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:55:21,397 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:56:06,990 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:06,990 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:56:06,990 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:06,990 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:56:19,979 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:19,979 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:56:19,979 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:19,979 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:56:39,517 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:39,517 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:56:39,517 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:39,517 [Worker-1324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:56:49,170 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:49,170 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:56:49,171 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:56:49,171 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:57:50,921 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:57:50,922 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:57:50,924 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:57:50,924 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:58:05,327 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:58:05,328 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:58:05,328 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:58:05,329 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:58:39,358 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:58:39,358 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:58:39,359 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:58:39,359 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 09:58:59,028 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:58:59,028 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 09:58:59,029 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 09:58:59,030 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:00:01,944 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:00:01,944 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:00:01,944 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:00:01,944 [Worker-1334] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:00:42,902 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:00:42,902 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:00:42,902 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:00:42,902 [Worker-1331] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:00:54,155 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:00:54,155 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:00:54,156 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:00:54,156 [Worker-1335] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:01:05,866 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:01:05,866 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:01:05,867 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:01:05,867 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:02:26,625 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:02:26,626 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:02:26,626 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:02:26,626 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:02:38,310 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:02:38,310 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:02:38,311 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:02:38,311 [Worker-1336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:03:23,558 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:03:23,558 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:03:23,558 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:03:23,558 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:03:32,655 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:03:32,655 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:03:32,655 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:03:32,655 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:03:43,190 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:03:43,190 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:03:43,191 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:03:43,191 [Worker-1321] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:04:20,896 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:04:20,896 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:04:20,897 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:04:20,897 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:04:23,390 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:04:23,391 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:04:23,392 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:04:23,392 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:04:33,643 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:04:33,643 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:04:33,644 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:04:33,645 [Worker-1320] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:06:22,665 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:06:22,666 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:06:22,667 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:06:22,667 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:06:29,612 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:06:29,612 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:06:29,612 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:06:29,612 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:07:55,637 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:07:55,637 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:07:55,638 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:07:55,638 [Worker-1330] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:18:27,307 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:18:27,307 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:18:27,308 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:18:27,308 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:19:10,842 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:19:10,842 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:19:10,842 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:19:10,842 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:19:35,447 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:19:35,447 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:19:35,448 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:19:35,448 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:19:45,390 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:19:45,390 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:19:45,392 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:19:45,392 [Worker-1333] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:20:07,314 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:20:07,314 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:20:07,315 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:20:07,315 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:20:20,493 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:20:20,494 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:20:20,494 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:20:20,494 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:20:47,436 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:20:47,437 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:20:47,438 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:20:47,438 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:21:34,482 [Worker-1344] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:21:34,482 [Worker-1344] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:21:34,484 [Worker-1344] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:21:34,484 [Worker-1344] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:25:06,560 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:06,560 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:25:06,560 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:06,560 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:25:29,925 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:29,926 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:25:29,926 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:29,926 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:25:32,322 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:32,322 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:25:32,322 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:32,322 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:25:44,844 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:44,845 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:25:44,845 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:44,845 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:25:49,733 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:49,733 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:25:49,733 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:25:49,733 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:26:43,967 [Worker-1345] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:26:43,967 [Worker-1345] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:26:43,967 [Worker-1345] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:26:43,967 [Worker-1345] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:27:17,519 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:27:17,519 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:27:17,519 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:27:17,519 [Worker-1329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:27:41,704 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:27:41,704 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:27:41,704 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:27:41,704 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:28:02,529 [Worker-1341] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:28:02,529 [Worker-1341] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:28:02,530 [Worker-1341] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:28:02,530 [Worker-1341] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:28:11,593 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:28:11,594 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:28:11,595 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:28:11,595 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:37:53,150 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:37:53,150 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:37:53,151 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:37:53,151 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:38:04,904 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:04,905 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:38:04,905 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:04,905 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:38:09,418 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:09,418 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:38:09,418 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:09,418 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:38:14,669 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:14,669 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:38:14,669 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:14,669 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:38:47,146 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:47,146 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:38:47,147 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:38:47,147 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:39:16,157 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:39:16,157 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:39:16,158 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:39:16,159 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:39:38,406 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:39:38,406 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:39:38,406 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:39:38,407 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:39:45,280 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:39:45,280 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:39:45,280 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:39:45,280 [Worker-1343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:40:00,101 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:40:00,101 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:40:00,102 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:40:00,102 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:40:15,662 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:40:15,662 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:40:15,662 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:40:15,662 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:40:31,371 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:40:31,371 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:40:31,371 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:40:31,371 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:41:08,427 [Worker-1351] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:41:08,427 [Worker-1351] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:41:08,428 [Worker-1351] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:41:08,428 [Worker-1351] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:41:18,301 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:41:18,301 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:41:18,301 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:41:18,301 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:41:37,770 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:41:37,779 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:41:37,779 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:41:37,779 [Worker-1350] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:42:20,838 [Worker-1354] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:42:20,838 [Worker-1354] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:42:20,839 [Worker-1354] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:42:20,839 [Worker-1354] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:42:35,198 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:42:35,199 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:42:35,200 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:42:35,200 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:42:42,044 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:42:42,044 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:42:42,044 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:42:42,044 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:43:56,197 [Worker-1353] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:43:56,197 [Worker-1353] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:43:56,198 [Worker-1353] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:43:56,199 [Worker-1353] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:44:59,078 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:44:59,079 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:44:59,079 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:44:59,079 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:45:41,750 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:45:41,751 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:45:41,752 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:45:41,752 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:46:08,883 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:46:08,883 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:46:08,884 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:46:08,884 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:46:21,177 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:46:21,177 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:46:21,177 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:46:21,177 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:46:31,841 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:46:31,841 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:46:31,841 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:46:31,841 [Worker-1342] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:47:22,922 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:47:22,922 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:47:22,922 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:47:22,922 [Worker-1349] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:48:05,173 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:48:05,173 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:48:05,174 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:48:05,174 [Worker-1356] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:52:42,522 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:52:42,522 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:52:42,522 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:52:42,522 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:52:45,622 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:52:45,622 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:52:45,622 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:52:45,623 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:53:23,186 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:53:23,186 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:53:23,187 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:53:23,187 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:54:27,386 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:54:27,386 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:54:27,387 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:54:27,387 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:55:42,119 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:55:42,119 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:55:42,119 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:55:42,119 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:56:29,497 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:56:29,497 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:56:29,497 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:56:29,497 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:56:32,172 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:56:32,172 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:56:32,172 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:56:32,172 [Worker-1355] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:58:03,479 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:58:03,479 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:58:03,479 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:58:03,479 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:58:12,272 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:58:12,272 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:58:12,272 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:58:12,272 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 10:58:52,639 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:58:52,639 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 10:58:52,639 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 10:58:52,639 [Worker-1352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:00:03,618 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:00:03,618 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:00:03,618 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:00:03,618 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:00:05,816 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:00:05,816 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:00:05,817 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:00:05,817 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:03:05,413 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:03:05,413 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:03:05,414 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:03:05,414 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:03:11,046 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:03:11,046 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:03:11,046 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:03:11,046 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:03:14,832 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:03:14,833 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:03:14,833 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:03:14,833 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:04:35,938 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:04:35,938 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:04:35,938 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:04:35,938 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:05:34,594 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:05:34,594 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:05:34,594 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:05:34,594 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:06:20,611 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:06:20,611 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:06:20,612 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:06:20,612 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:06:35,950 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:06:35,950 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:06:35,951 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:06:35,951 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:06:48,461 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:06:48,462 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:06:48,462 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:06:48,462 [Worker-1338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:07:10,968 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:07:10,968 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:07:10,968 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:07:10,968 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:07:23,819 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:07:23,819 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:07:23,820 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:07:23,820 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:07:45,793 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:07:45,793 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:07:45,793 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:07:45,793 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:08:27,834 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:08:27,834 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:08:27,834 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:08:27,834 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:08:53,530 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:08:53,530 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:08:53,531 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:08:53,531 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:09:11,814 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:11,815 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:09:11,815 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:11,815 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:09:14,708 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:14,708 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:09:14,708 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:14,708 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:09:23,396 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:23,396 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:09:23,396 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:23,396 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:09:40,501 [Worker-1365] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:40,501 [Worker-1365] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:09:40,501 [Worker-1365] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:09:40,501 [Worker-1365] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:10:13,551 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:10:13,551 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:10:13,551 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:10:13,551 [Worker-1357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:10:18,842 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:10:18,843 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:10:18,843 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:10:18,843 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:11:44,568 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:11:44,568 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:11:44,568 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:11:44,568 [Worker-1348] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:11:54,875 [Worker-1369] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:11:54,875 [Worker-1369] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:11:54,875 [Worker-1369] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:11:54,875 [Worker-1369] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:12:19,344 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:12:19,344 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:12:19,345 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:12:19,345 [Worker-1358] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:13:08,042 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:13:08,043 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:13:08,043 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:13:08,043 [Worker-1361] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:13:55,517 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:13:55,517 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:13:55,518 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:13:55,518 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:14:08,233 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:14:08,233 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:14:08,233 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:14:08,233 [Worker-1364] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:18:14,251 [Worker-1367] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:18:14,252 [Worker-1367] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:18:14,252 [Worker-1367] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:18:14,253 [Worker-1367] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:18:57,716 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:18:57,716 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:18:57,717 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:18:57,717 [Worker-1366] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:19:00,089 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:19:00,089 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:19:00,091 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:19:00,091 [Worker-1359] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:20:48,037 [Worker-1371] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:20:48,037 [Worker-1371] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:20:48,038 [Worker-1371] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:20:48,038 [Worker-1371] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:21:31,624 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:21:31,624 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:21:31,624 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:21:31,624 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:21:43,380 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:21:43,380 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:21:43,381 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:21:43,381 [Worker-1372] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:24:41,669 [Worker-1374] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:24:41,669 [Worker-1374] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:24:41,669 [Worker-1374] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:24:41,669 [Worker-1374] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-13 11:24:46,803 [Worker-1370] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:24:46,803 [Worker-1370] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-13 11:24:46,803 [Worker-1370] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-13 11:24:46,803 [Worker-1370] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources

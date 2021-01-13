@@ -36,7 +36,9 @@ $(function(){
 			type: "POST",
 			transactional: true,
 			success: function(re){
-				alert(re);
+				if (re){
+					alert("저장되었습니다.");
+				}
 			},
 			error: function(request, status, error){
 				console.log(status);
