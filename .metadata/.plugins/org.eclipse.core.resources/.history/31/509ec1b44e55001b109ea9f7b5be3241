@@ -108,6 +108,7 @@ function showModel(id, name, useyn){
 
 function changeRowColor(checkBox){
 	var tr = $(checkBox).parents("tr");
+	
 	(checkBox.checked) ? tr.css("background", "#f0f0f0") : tr.css("background", "white");
 }
 

@@ -43,9 +43,9 @@
 	</insert>
 	
 	<delete id="deleteMappingTable">
-		DELETE FROM MAPPINGTABLE WHERE 1=1 
-		<foreach collection="list" item="authority" separator=" " >
-			AND ( GROUPID = #{ authority.groupId } AND OBJID = #{ authority.objId } )
+		DELETE FROM MAPPINGTABLE WHERE 
+		<foreach collection="list" item="authority" separator=" or " >
+			 ( GROUPID = #{ authority.groupId } AND OBJID = #{ authority.objId } )
 		</foreach>
 	</delete>
 </mapper>

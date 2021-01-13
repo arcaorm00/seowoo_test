@@ -101,6 +101,17 @@ function showModel(id, name, useyn){
 	groupName = name;
 	groupUseYn = useyn;
 	
+	drawTable(groupId);
+	
+	$("#myModal").css("display", "block");
+}
+
+function changeRowColor(checkBox){
+	var tr = $(checkBox).parents("tr");
+	(checkBox.checked) ? tr.css("background", "#f0f0f0") : tr.css("background", "white");
+}
+
+function drawTable(groupId){
 	$.ajax({
 		data: {groupId: groupId},
 		url: "./authorityDetail.ino",
@@ -108,13 +119,13 @@ function showModel(id, name, useyn){
 			$("#authorityTbody").empty();
 			for (var i = 0 ; i < res.length ; i++){
 				var nRow = res[i];
-				console.log(nRow);
+
 				var tr = $("<tr></tr>");
 				var checkBox = null;
 				if (nRow.useYn == '사용중'){
-					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck' checked='checked'/></td>");
+					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck' onClick='changeRowColor(this);' checked='checked'/></td>");
 				}else{
-					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck'/></td>");
+					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' onClick='changeRowColor(this);' name='objCheck'/></td>");
 				}
 				var objId = $("<td style='width: 160px;' align='center' class='objId'>" + nRow.objId + "</td>");
 				var objName = $("<td style='width: 180px;' align='center' class='objName'>" + nRow.objName + "</td>");
@@ -126,7 +137,6 @@ function showModel(id, name, useyn){
 			}
 		}
 	});
-	$("#myModal").css("display", "block");
 }
 
 $(function(){
@@ -151,8 +161,6 @@ $(function(){
 			}
 		});
 		
-		console.log(list);
-		
 		if (list.length == 0){
 			alert("수정된 정보가 없습니다.");
 		}else{
@@ -170,6 +178,7 @@ $(function(){
 					}else{
 						alert("예기치 못한 오류로 권한이 저장되지 못 했습니다.");
 					}
+					drawTable(groupId);
 				},
 				error: function(request, status, error){
 					console.log(status);

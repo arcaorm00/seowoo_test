@@ -48,6 +48,9 @@ public class AuthorityController {
 		List<AuthorityDto> objectList = authorityService.selectObjectTableList();
 		List<AuthorityDto> mappingList = authorityService.selectMappingTableListByGroupId(map);
 		
+		System.out.println("objectList ::: " + objectList);
+		System.out.println("mappingList ::: " + mappingList);
+		
 		for (AuthorityDto authorityDto : objectList){
 			if (mappingList.size() <= 0){
 				authorityDto.setUseYn("미사용");
