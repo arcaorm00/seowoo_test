@@ -93,6 +93,7 @@
 var groupId = null;
 var groupName = null;
 var groupUseYn = null;
+var mappingList = null;
 
 function showModal(id, name, useyn){
 	
@@ -118,34 +119,33 @@ function drawTable(groupId){
 		url: "./authorityDetail.ino",
 		success: function(res){
 			$("#authorityTbody").empty();
-			var mappingList = res.mappingList;
+			mappingList = res.mappingList;
 			var objectList = res.objectList;
 
 			for (var i = 0 ; i < objectList.length ; i++){
 				var objectRow = objectList[i];
 
 				var tr = $("<tr></tr>");
-				var checkBox = null;
-				var useYn = null;
-				if (mappingList.length <= 0){
-					checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' onClick='changeRowColor(this);' name='objCheck'/></td>");
-					useYn = $("<td style='width: 120px;' align='center' class='useYn'>미사용</td>");
+				var checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck' onClick='changeRowColor(this);'/></td>");
+				var useYn = "";
+				
+				if (mappingList.length < 0) {
+					useYn = "미사용";
 				}else{
-					mappingList.forEach(function(mappingRow, idx){
-						if (objectRow.OBJID == mappingRow.OBJID){
-							checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' name='objCheck' onClick='changeRowColor(this);' checked='checked'/></td>");
-							useYn = $("<td style='width: 120px;' align='center' class='useYn'>사용중</td>");
-						}else if (objectRow.OBJID != mappingRow.OBJID && useYn == null){
-							checkBox = $("<td style='width: 20px;' align='center'><input type='checkbox' onClick='changeRowColor(this);' name='objCheck'/></td>");
-							useYn = $("<td style='width: 120px;' align='center' class='useYn'>미사용</td>");
+					for (var j = 0; j < mappingList.length; j++) {
+						if(objectRow.OBJID == mappingList[j].OBJID){
+							useYn = "사용중";
+							checkBox.find("input").attr("checked", "checked");
+						}else if (objectRow.OBJID != mappingList[j].OBJID && useYn == ""){
+							useYn = "미사용";
 						}
-					});
+					}
 				}
 				
 				var objId = $("<td style='width: 160px;' align='center' class='objId'>" + objectRow.OBJID + "</td>");
 				var objName = $("<td style='width: 180px;' align='center' class='objName'>" + objectRow.OBJNAME + "</td>");
 				var dept = $("<td style='width: 100px;' align='center' class='dept'>" + objectRow.DEPT + "</td>");
-				
+				useYn = $("<td style='width: 120px;' align='center' class='useYn'>"+useYn+"</td>");
 
 				tr.append(checkBox, objId, objName, dept, useYn);
 				$("#authorityTbody").append(tr);
@@ -163,24 +163,35 @@ $(function(){
 	$("#registerBtn").click(function(){
 		var insertList = [];
 		var deleteList = [];
+		console.log(mappingList);
 		$("input[name=objCheck]").each(function(){
 			var objId = $(this).parents("tr").children(".objId").text();
 			var objName = $(this).parents("tr").children(".objName").text();
 			var dept = $(this).parents("tr").children(".dept").text();
-			
-			if($(this).is(":checked") && $(this).parents("tr").children(".useYn").text() == "미사용"){
-				var row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
+			var isExist = false;
+			var row = {};
+
+			for (var i = 0; i < mappingList.length; i++) {
+				var mappingRow = mappingList[i];
+				if (mappingRow.OBJID == objId){
+					isExist = true;
+				}
+			}
+			if($(this).is(":checked") && !isExist){
+				row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
 				insertList.push(row);
-			}else if(!$(this).is(":checked") && $(this).parents("tr").children(".useYn").text() == "사용중"){
-				var row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
+			}else if(!$(this).is(":checked") && isExist){
+				row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
 				deleteList.push(row);
 			}
 		});
 		
+		console.log(insertList);
+		console.log(deleteList);
+		
 		if (insertList.length == 0 && deleteList.length == 0){
 			alert("수정된 정보가 없습니다.");
 		}else{
-			
 			var parameterMap = {insertList: insertList, deleteList: deleteList};
 			$.ajax({
 				data: JSON.stringify(parameterMap),
