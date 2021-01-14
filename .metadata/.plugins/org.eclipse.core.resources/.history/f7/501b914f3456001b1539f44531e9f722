@@ -1,5 +1,6 @@
 package ino.web.authorityTable.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -74,6 +75,7 @@ public class AuthorityController {
 			@RequestBody Map<String, List<Map<String, Object>>> parameterMap){
 		
 		boolean isRegisted = false;
+		int re = 0;
 		TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
 		
 		System.out.println("INSERT LIST ::: " + parameterMap.get("insertList"));
@@ -84,18 +86,19 @@ public class AuthorityController {
 		
 		try{
 			if (insertList.size() > 0){
-				authorityService.insertMappingTable(insertList);
+				re += authorityService.insertMappingTable(insertList);
 			}
 			if (deleteList.size() > 0){
-				authorityService.deleteMappingTable(deleteList);
+				re += authorityService.deleteMappingTable(deleteList);
 			}
-			transactionManager.commit(status);
-			isRegisted = true;
+			transactionManager.commit(status);			
 		}catch (Exception e) {
-			isRegisted = false;
 			transactionManager.rollback(status);
 		}
-
+		
+		if (re == (insertList.size() + deleteList.size())){
+			isRegisted = true;
+		}
 		return isRegisted;
 	}
 }

@@ -105,25 +105,28 @@ public class CommCodeController {
 		System.out.println("insertList ::: " + insertList);
 		System.out.println("updateList ::: " + updateList);
 		System.out.println("deleteList ::: " + deleteList);
+	
+		int re = 0;
 		
 		try{
 			if (insertList.size() > 0){
-				commCodeService.insertDetailCode(insertList);
+				re += commCodeService.insertDetailCode(insertList);
 			}
 			if (updateList.size() > 0){
-				commCodeService.updateDetailCode(updateList);
+				re += commCodeService.updateDetailCode(updateList);
 			}
 			if (deleteList.size() > 0){
-				commCodeService.deleteDetailCode(deleteList);
+				re += commCodeService.deleteDetailCode(deleteList);
 			}
 			transactionManager.commit(status);
-			isInserted = true;
 		}catch (Exception e) {
-			isInserted = false;
 			transactionManager.rollback(status);
 		}
 
 //		int re = commCodeService.insertDetailCode(codeList);
+		if(re == codeList.size()){
+			isInserted = true;
+		}
 		return isInserted;
 	}
 	

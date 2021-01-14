@@ -44,7 +44,8 @@ public class CommCodeService {
 	}
 	
 	public int updateDetailCode(List<Map<String, Object>> codeList){
-		int re = sqlSessionTemplate.update("updateDecode", codeList);
+		int re = 0;
+		re = sqlSessionTemplate.update("updateDecode", codeList);
 		System.out.println("SERVICE UPDATE RESULT :: " + re);
 
 		return re;

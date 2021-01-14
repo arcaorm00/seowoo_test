@@ -177,11 +177,12 @@ $(function(){
 					isExist = true;
 				}
 			}
+			
+			row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
+			
 			if($(this).is(":checked") && !isExist){
-				row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
 				insertList.push(row);
 			}else if(!$(this).is(":checked") && isExist){
-				row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
 				deleteList.push(row);
 			}
 		});

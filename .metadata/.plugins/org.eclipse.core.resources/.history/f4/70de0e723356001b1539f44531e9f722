@@ -84,6 +84,7 @@
 	</update>
 -->
 	<update id="updateDecode" parameterType="java.util.List">
+	
 		<foreach item="code" collection="list" separator=";" open="DECLARE BEGIN" close="; END;">
 		    UPDATE CODED
 			   SET DECODE_NAME = #{ code.DECODE_NAME },

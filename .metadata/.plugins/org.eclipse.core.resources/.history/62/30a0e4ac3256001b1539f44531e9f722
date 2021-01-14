@@ -83,13 +83,15 @@
 		</foreach>
 	</update>
 -->
-	<update id="updateDecode" parameterType="java.util.List">
-		<foreach item="code" collection="list" separator=";" open="DECLARE BEGIN" close="; END;">
-		    UPDATE CODED
-			   SET DECODE_NAME = #{ code.DECODE_NAME },
-			       USE_YN = #{ code.USE_YN }
-			 WHERE DECODE = #{ code.DECODE }
-		</foreach>
+	<update id="updateDecode" parameterType="java.util.Map">
+	
+	<foreach item="code" collection="list" separator=";" open="DECLARE BEGIN" close="; END;">
+	    UPDATE CODED
+		   SET DECODE_NAME = #{ code.DECODE_NAME },
+		       USE_YN = #{ code.USE_YN }
+		 WHERE DECODE = #{ code.DECODE }
+	</foreach>
+		
 	</update>
 	
 	<delete id="deleteDecode" parameterType="java.util.List">
