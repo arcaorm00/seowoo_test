@@ -18,7 +18,7 @@
 	
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 
-	<context:component-scan base-package="com.*"/>
+	<context:component-scan base-package="ino.*"/>
 	<context:annotation-config />
 	<mvc:annotation-driven/>
 	
