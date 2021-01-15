@@ -1,0 +1,22 @@
+package com.web.freeBoard.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.web.freeBoard.service.FreeBoardService;
+
+@Controller
+public class FreeBoardController {
+
+	@Autowired
+	private FreeBoardService freeBoardService;
+	
+	@RequestMapping("/main.ino")
+	public ModelAndView freeBoardMain(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("boardMain");
+		return mav;
+	}
+}
