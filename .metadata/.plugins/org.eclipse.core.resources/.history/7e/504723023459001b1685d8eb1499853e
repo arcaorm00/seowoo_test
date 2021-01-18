@@ -12,7 +12,7 @@
 	
 	<select id="selectObjectTableList" resultType="java.util.Map">
 		SELECT OBJID, OBJNAME, DEPT 
-		  FROM OBJECTTABLE ORDER BY OBJID, SEQ
+		  FROM OBJECTTABLE ORDER BY OBJID DESC
 	</select>
 	
 	<select id="selectMappingTableListByGroupId" resultType="java.util.Map">
