@@ -22,6 +22,7 @@ function redrawBoard(page){
 			var list = res.list;
 			$("tbody").empty();
 			
+			
 			for (var i = 0 ; i < list.length ; i++){
 				var tr = $("<tr></tr>");
 				var board = list[i];
@@ -31,9 +32,9 @@ function redrawBoard(page){
 				var name = $("<td width='100px;'></td>").html(board.NAME);
 				var regdate = $("<td width='130px;'></td>").html(board.REGDATE);
 				tr.append(codetype, num, title, name, regdate);
-				$("tbody").append(tr);
 			}
-
+			
+			$("tbody").append(tr);
 		}
 	});
 }

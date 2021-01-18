@@ -19,26 +19,13 @@ function redrawBoard(page){
 		url: "./mainSearch.ino",
 		success: function(res){
 			console.log(res);
-			var list = res.list;
-			$("tbody").empty();
-			
-			for (var i = 0 ; i < list.length ; i++){
-				var tr = $("<tr></tr>");
-				var board = list[i];
-				var codetype = $("<td width='50px;' align='center'></td>").html(board.CODE_TYPE);
-				var num = $("<td width='50px;' align='center'></td>").html(board.NUM);
-				var title = $("<td width='200px;'></td>").html(board.TITLE);
-				var name = $("<td width='100px;'></td>").html(board.NAME);
-				var regdate = $("<td width='130px;'></td>").html(board.REGDATE);
-				tr.append(codetype, num, title, name, regdate);
-				$("tbody").append(tr);
-			}
-
 		}
 	});
 }
 $(function(){
-
+	$("#searchBtn").click(function(){
+		
+	});
 });
 </script>
 </head>
