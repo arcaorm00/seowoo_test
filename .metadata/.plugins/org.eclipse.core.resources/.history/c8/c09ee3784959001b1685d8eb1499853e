@@ -46,7 +46,7 @@ $(function(){
 <table border="1">
 	<thead>
 		<tr>
-			<th width="50px;">타입</th>
+			<th width="70px;">타입</th>
 			<th width="50px;">글번호</th>
 			<th width="200px;">글제목</th>
 			<th width="100px;">글쓴이</th>
@@ -59,8 +59,8 @@ $(function(){
 	<tbody>
 	<c:forEach items="${ list }" var="board">
 		<tr>
-			<td width="50px;" align="center">${ board.CODETYPE }</td>
-			<td width="50px;" align="center">${ board.NUM }</td>
+			<td width="70px;">${ board.CODETYPE }</td>
+			<td width="50px;">${ board.NUM }</td>
 			<td width="200px;">${ board.TITLE }</td>
 			<td width="100px;">${ board.NAME }</td>
 			<td width="130px;">${ board.REGDATE }</td>
