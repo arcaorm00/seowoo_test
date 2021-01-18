@@ -54,8 +54,6 @@ public class FreeboardController {
 		Pagination pageUtil = new Pagination(page, freeBoardService.getCountFreeBoard());
 		map.put("searchField", searchField);
 		map.put("keyword", keyword);
-		map.put("startPage", pageUtil.getStartPage());
-		map.put("endPage", pageUtil.getEndPage());
 		List<Map<String, Object>> list = freeBoardService.selectAllFreeBoard(map);
 		System.out.println("list :: " + list);
 		map.put("list", list);

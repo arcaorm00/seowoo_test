@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
 
-function redrawBoard(page){
+function searchFunction(page){
 	var searchField = $("#searchOption").val();
 	var keyword = $("#keyword").val();
 	console.log(searchField + "/" + keyword);
@@ -40,7 +40,7 @@ $(function(){
 		<option value="title">글제목</option>
 	</select>
 	<input type="text" id="keyword" name="keyword" value=""/>
-	<button id="searchBtn" onClick="redrawBoard(1);">검색</button>
+	<button id="searchBtn" onClick="searchFunction(1);">검색</button>
 </div>
 <br/>
 <table border="1">

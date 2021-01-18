@@ -46,16 +46,11 @@ public class FreeboardController {
 	@ResponseBody
 	public Map<String, Object> mainSearch(HttpServletRequest request,
 			@RequestParam(defaultValue="") String searchField,
-			@RequestParam(defaultValue="") String keyword,
-			@RequestParam(defaultValue = "1")int page){
+			@RequestParam(defaultValue="") String keyword){
 		Map<String, Object> map = new HashMap<String, Object>();
 		System.out.println("searchField: " + searchField + " / " + "keyword: " + keyword);
-		
-		Pagination pageUtil = new Pagination(page, freeBoardService.getCountFreeBoard());
 		map.put("searchField", searchField);
 		map.put("keyword", keyword);
-		map.put("startPage", pageUtil.getStartPage());
-		map.put("endPage", pageUtil.getEndPage());
 		List<Map<String, Object>> list = freeBoardService.selectAllFreeBoard(map);
 		System.out.println("list :: " + list);
 		map.put("list", list);
