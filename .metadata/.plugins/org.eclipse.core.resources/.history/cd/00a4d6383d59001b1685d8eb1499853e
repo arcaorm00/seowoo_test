@@ -1,0 +1,9 @@
+package com.web.mavenBoardTest.util;
+
+public class Pagination {
+
+	private static final int PAGE_SIZE = 10;
+	private static final int BLOCK_SIZE = 10;
+	
+	
+}

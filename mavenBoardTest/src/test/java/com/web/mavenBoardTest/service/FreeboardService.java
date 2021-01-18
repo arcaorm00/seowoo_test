@@ -13,7 +13,11 @@ public class FreeboardService {
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
 	
-	public List<Map<String, Object>> selectAllFreeBoard(){
-		return sqlSessionTemplate.selectList("selectAllFreeBoard");
+	public List<Map<String, Object>> selectAllFreeBoard(Map<String, Object> map){
+		return sqlSessionTemplate.selectList("selectAllFreeBoard", map);
+	}
+	
+	public int getCountFreeBoard(){
+		return sqlSessionTemplate.selectOne("getCountFreeBoard");
 	}
 }

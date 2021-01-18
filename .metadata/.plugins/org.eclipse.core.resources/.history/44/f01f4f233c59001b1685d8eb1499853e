@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="freeBoard">
+  <select id="selectAllFreeBoard" resultType="java.util.Map">
+    SELECT CASE CODE_TYPE WHEN '01' THEN '자유' WHEN '02' THEN '익명' WHEN '03' THEN 'QnA' END, 
+    	   NUM, NAME, TITLE, CONTENT, TO_CHAR(REGDATE, 'YYYY/MM/DD') AS REGDATE
+      FROM FREEBOARD
+  </select>
+</mapper>
