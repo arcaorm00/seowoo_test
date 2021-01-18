@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;template&apos;&#x0D;&#x0A;- Original project: &apos;mavenBoard&apos;&#x0D;&#x0A;- Destination element: &apos;template&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     defaultHeader.jsp&#x0D;&#x0A;     defaultMain.jsp&#x0D;&#x0A;     defaultFooter.jsp&#x0D;&#x0A;     defaultMenu.jsp" description="Copy files" element1="WebContent/WEB-INF/view/template/defaultHeader.jsp" element2="WebContent/WEB-INF/view/template/defaultMain.jsp" element3="WebContent/WEB-INF/view/template/defaultFooter.jsp" element4="WebContent/WEB-INF/view/template/defaultMenu.jsp" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1610933515279" target="/mavenBoardTest/WebContent/WEB-INF/view/template" units="0" version="1.0"/>
+</session>

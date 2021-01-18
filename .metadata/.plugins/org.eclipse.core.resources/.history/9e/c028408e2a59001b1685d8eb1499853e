@@ -1,0 +1,5 @@
+package com.web.mavenBoardTest.controller;
+
+public class FreeboardController {
+
+}

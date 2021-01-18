@@ -1,0 +1,5 @@
+package com.web.mavenBoardTest.service;
+
+public class FreeboardService {
+
+}
