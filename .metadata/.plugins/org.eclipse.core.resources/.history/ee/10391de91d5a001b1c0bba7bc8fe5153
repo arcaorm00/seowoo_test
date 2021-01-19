@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="freeBoard">
+  <select id="selectAllFreeBoard" resultType="java.util.Map">
+  SELECT SEARCHBOARD.*
+    FROM (
+    SELECT ROW_NUMBER() OVER (ORDER BY NUM desc) rn,
+    	   CASE CODE_TYPE WHEN '01' THEN '자유' WHEN '02' THEN '익명' WHEN '03' THEN 'QnA' END AS CODETYPE, 
+    	   NUM, NAME, TITLE, CONTENT, TO_CHAR(REGDATE, 'YYYY/MM/DD') AS REGDATE
+      FROM FREEBOARD
+     WHERE 1 = 1
+     <if test="searchField != null and !searchField.equals('') and searchField.equals('num')">
+     	AND NUM = #{ keyword }
+     </if>
+     <if test="searchField != null and !searchField.equals('') and searchField.equals('title')">
+     	AND TITLE like '%'||#{ keyword }||'%'
+     </if>
+    ) SEARCHBOARD
+    WHERE rn BETWEEN #{ startPage } AND #{ endPage }
+  </select>
+  
+  <select id="getCountFreeBoard" resultType="int">
+    SELECT COUNT(NUM)
+      FROM FREEBOARD
+     WHERE 1 = 1
+     <if test="searchField != null and !searchField.equals('') and searchField.equals('num')">
+     	AND NUM = #{ keyword }
+     </if>
+     <if test="searchField != null and !searchField.equals('') and searchField.equals('title')">
+     	AND TITLE like '%'||#{ keyword }||'%'
+     </if>
+  </select>
+  
+  <select id="getDecodeByCode" resultType="java.util.Map">
+  	SELECT CODE, DECODE, DECODE_NAME, USE_YN
+  	  FROM CODED
+  	 WHERE CODE = #{ code } AND USE_YN = #{ use_yn }
+  </select>
+  
+  <select id="getFreeBoardByNum" resultType="java.util.Map">
+  	SELECT CODE_TYPE, NUM, NAME, TITLE, CONTENT, TO_CHAR(REGDATE, 'YYYY/MM/DD') AS REGDATE
+  	  FROM FREEBOARD
+  	 WHERE NUM = #{ num }
+  </select>
+  
+  <insert id="insertFreeBoard">
+  	<selectKey resultType="int" keyProperty="num" order="BEFORE">
+  		SELECT SEQ_FREEBOARD.NEXTVAL FROM DUAL
+  	</selectKey>
+  	INSERT INTO FREEBOARD(CODE_TYPE, NUM, NAME, TITLE, CONTENT, REGDATE) 
+  		   VALUES (#{ writeType }, #{ num }, #{ name }, #{ title }, #{ content }, SYSDATE)
+  </insert>
+  
+</mapper>

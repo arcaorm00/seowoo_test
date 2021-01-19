@@ -1,0 +1,31 @@
+package com.web.mavenBoardTest.service;
+
+import java.util.List;
+import java.util.Map;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class FreeboardService {
+
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public List<Map<String, Object>> selectAllFreeBoard(Map<String, Object> map){
+		return sqlSessionTemplate.selectList("selectAllFreeBoard", map);
+	}
+	
+	public int getCountFreeBoard(Map<String, Object> map){
+		return sqlSessionTemplate.selectOne("getCountFreeBoard", map);
+	}
+	
+	public List<Map<String, Object>> getDecodeByCode(Map<String, Object> map){
+		return sqlSessionTemplate.selectList("getDecodeByCode", map);
+	}
+	
+	public int insertFreeBoard(Map<String, Object> map){
+		return sqlSessionTemplate.insert("insertFreeBoard", map);
+	}
+}
