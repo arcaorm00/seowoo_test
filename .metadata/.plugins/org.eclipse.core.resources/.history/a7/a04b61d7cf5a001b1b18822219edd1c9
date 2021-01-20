@@ -1,0 +1,5 @@
+package ino.web.members.service;
+
+public class MembersService {
+
+}

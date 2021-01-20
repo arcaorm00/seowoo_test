@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div style="display: relative; margin-right: 600px;">
+		<a id="signupAnchor" href="./signup.ino">회원가입</a>
+		<a id="signinAnchor" href="./memberSignin.ino">로그인</a>
+		<a id="signoutAnchor" href="#">로그아웃</a>
+	</div>
+	
+	<a href="./main.ino"><h1>Inosys Sample Web HomePage</h1></a>
+</body>
+</html>

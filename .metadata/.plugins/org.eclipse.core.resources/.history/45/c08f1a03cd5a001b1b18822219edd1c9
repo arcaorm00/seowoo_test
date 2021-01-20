@@ -1,0 +1,83 @@
+package ino.web.members.controller;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import ino.web.authorityTable.service.AuthorityService;
+
+@Controller
+public class MembersController {
+	
+	@Autowired
+	private AuthorityService authorityService;
+
+	@RequestMapping("/signup.ino")
+	public ModelAndView signUp(HttpServletRequest request){
+		ModelAndView mav = new ModelAndView("memberSignup");
+		mav.addObject("groupList", authorityService.getGroupList());
+		return mav;
+	}
+	
+	@RequestMapping("/signupPro.ino")
+	@ResponseBody
+	public Map<String, Object> signUp(HttpServletRequest request, @RequestBody Map<String, Object> map){
+		Map<String, Object> resultMap = new HashMap<String, Object>();
+		System.out.println(map);
+		String password = (String) map.get("password");
+		String newPwd = bcryptSalting(password);
+		System.out.println("newPwd :: " + newPwd);
+		return resultMap;
+	}
+	
+	public String bcryptSalting(String password){
+        // 디비에 저장할 비밀번호 암호화
+        String encrypted = BCrypt.hashpw(password, BCrypt.gensalt());
+        System.out.println("encrypted : " + encrypted);
+        
+        return encrypted;
+	}
+	
+	public boolean isCheckedPassword(String password, String encrypted){
+		// 로그인시 디비에 저장된 암호화된 문자열과 사용자가 입력한 비밀번호로 checkpw 검증
+        boolean isRightPwd = BCrypt.checkpw(password, encrypted); // true
+        return isRightPwd;
+	}
+	
+	/*
+     SHA-256으로 해싱하는 메소드
+     @param bytes
+     @return
+     @throws NoSuchAlgorithmException 
+    */
+	public static String sha256(String msg) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        md.update(msg.getBytes());
+        
+        return bytesToHex(md.digest());
+    }
+ 
+	/*
+	바이트를 헥스값으로 변환한다
+    @param bytes
+    @return
+    */
+    public static String bytesToHex(byte[] bytes) {
+        StringBuilder builder = new StringBuilder();
+        for (byte b: bytes) {
+          builder.append(String.format("%02x", b));
+        }
+        return builder.toString();
+    }
+}

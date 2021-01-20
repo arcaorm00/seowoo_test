@@ -43,6 +43,7 @@ function clickUpdateBtn(){
 }
 
 $(function(){
+	
 	$("#modifyBtn").click(function(){
 		$("#writeType").attr("disabled", false);
 		$("#name").attr("readonly", false);

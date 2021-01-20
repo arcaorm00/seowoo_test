@@ -1,0 +1,18 @@
+package ino.web.members.service;
+
+import java.util.Map;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MembersService {
+
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public int insertMember(Map<String, Object> map){
+		return sqlSessionTemplate.insert("insertMember", map);
+	}
+}

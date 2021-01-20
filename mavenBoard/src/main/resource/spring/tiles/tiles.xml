@@ -42,7 +42,8 @@
         <put-attribute name="footer" value="/WEB-INF/view/template/defaultFooter.jsp" />
         <put-attribute name="content" value="/WEB-INF/view/commonCode/commonCodeInsert.jsp" />
     </definition>
-
+    
+	<!-- 권한 설정 -->
     <definition name="authorityTableMain" extends="mainTemplate">
         <put-attribute name="header" value="/WEB-INF/view/template/defaultHeader.jsp" />
         <put-attribute name="menu" value="/WEB-INF/view/template/defaultMenu.jsp" />
@@ -54,6 +55,20 @@
         <put-attribute name="menu" value="/WEB-INF/view/template/defaultMenu.jsp" />
         <put-attribute name="footer" value="/WEB-INF/view/template/defaultFooter.jsp" />
         <put-attribute name="content" value="/WEB-INF/view/authorityCheck/authorityTableDetail.jsp" />
+    </definition>
+    
+    <!-- 회원 -->
+    <definition name="memberSignup" extends="mainTemplate">
+        <put-attribute name="header" value="/WEB-INF/view/template/defaultHeader.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/view/template/defaultMenu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/view/template/defaultFooter.jsp" />
+        <put-attribute name="content" value="/WEB-INF/view/memberSign/memberSignup.jsp" />
+    </definition>
+    <definition name="memberSignin" extends="mainTemplate">
+        <put-attribute name="header" value="/WEB-INF/view/template/defaultHeader.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/view/template/defaultMenu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/view/template/defaultFooter.jsp" />
+        <put-attribute name="content" value="/WEB-INF/view/memberSign/memberSignin.jsp" />
     </definition>
 
 </tiles-definitions>

@@ -1,9 +1,0 @@
-package ino.web.authorityTable.service;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class AuthorityService {
-
-	
-}

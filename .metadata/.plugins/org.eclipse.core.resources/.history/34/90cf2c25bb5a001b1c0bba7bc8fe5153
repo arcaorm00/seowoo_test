@@ -1,0 +1,5 @@
+package ino.web.members.controller;
+
+public class MembersController {
+
+}

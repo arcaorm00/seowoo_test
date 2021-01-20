@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var sessionID = sessionStorage.getItem("id");
+	if (sessionID != null && sessionID != undefined){
+		$("#signupAnchor").hide();
+		$("#signinAnchor").hide();
+	}else{
+		$("#signoutAnchor").hide();
+	}
+	
+	$("#signoutAnchor").click(function(){
+		sessionStorage.removeItem("id");
+		$("#signupAnchor").show();
+		$("#signinAnchor").show();
+		$("#signoutAnchor").hide();
+	});
+});
+</script>
+</head>
+<body>
+	<div style="position: relative; height: 20px;">
+		<a style="float: left;" id="signupAnchor" href="./signup.ino">회원가입</a>
+		<a style="float: left;" id="signinAnchor" href="./memberSignin.ino">로그인</a>
+		<a style="float: left;" id="signoutAnchor" href="#">로그아웃</a>
+		<a style="float: right;" href="./authorityMain.ino">권한 체크</a>
+	</div>
+	
+	<a href="./main.ino"><h1>Inosys Sample Web HomePage</h1></a>
+</body>
+</html>
