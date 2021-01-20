@@ -20,6 +20,7 @@ $(function(){
 	
 	$("#signoutAnchor").click(function(){
 		sessionStorage.removeItem("id");
+		alert("로그아웃 되었습니다.");
 		$("#signupAnchor").show();
 		$("#signinAnchor").show();
 		$("#signoutAnchor").hide();

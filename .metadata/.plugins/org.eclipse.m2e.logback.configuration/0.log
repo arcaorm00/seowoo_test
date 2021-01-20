@@ -23750,3 +23750,8 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2021-01-20 16:37:55,315 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-01-20 16:37:55,316 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
 2021-01-20 16:37:55,318 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-20 16:37:55,318 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
+2021-01-20 16:53:40,779 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-20 16:53:40,779 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\main\resources
+2021-01-20 16:53:40,782 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-20 16:53:40,783 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse\workspace\mavenBoard\src\test\resources
