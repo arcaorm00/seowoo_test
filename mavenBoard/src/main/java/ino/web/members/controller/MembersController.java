@@ -3,6 +3,7 @@ package ino.web.members.controller;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -85,6 +87,13 @@ public class MembersController {
 		resultMap.put("isCorrectPwd", isCorrectPwd);
 		resultMap.put("member", member);
 		return resultMap;
+	}
+	
+	@RequestMapping("/getMappingObjectByID.ino")
+	@ResponseBody
+	public List<Map<String, Object>> getMappingObjectByID(HttpServletRequest request, @RequestParam String id){
+		List<Map<String, Object>> mappingList = membersService.getMappingObjectByID(id);
+		return mappingList;
 	}
 	
 	/*

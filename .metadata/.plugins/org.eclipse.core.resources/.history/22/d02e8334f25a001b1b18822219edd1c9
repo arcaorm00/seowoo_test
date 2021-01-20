@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ino.web.members.mapper">
+
+	<insert id="insertMember">
+		INSERT INTO MEMBER(ID, PASSWORD, NAME, GROUPID) VALUES (#{ id }, #{ password }, #{ name }, #{ groupId })
+	</insert>
+	
+	<select id="isExistMember" resultType="java.util.Map">
+		SELECT ID, PASSWORD, NAME, GROUPID
+		  FROM MEMBER
+		 WHERE ID = #{ id }
+	</select>
+	
+	<select id="getMappingObjectByID">
+		SELECT GROUPID, OBJID, GROUPNAME, USE_YN, OBJNAME, DEPT 
+		  FROM MAPPINGTABLE
+		 WHERE GROUPID = (SELECT GROUPID FROM MEMBER WHERE ID = #{ id })
+	</select>
+</mapper>

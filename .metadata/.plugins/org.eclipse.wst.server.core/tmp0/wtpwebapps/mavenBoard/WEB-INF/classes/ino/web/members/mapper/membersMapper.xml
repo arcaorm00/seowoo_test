@@ -14,4 +14,10 @@
 		  FROM MEMBER
 		 WHERE ID = #{ id }
 	</select>
+	
+	<select id="getMappingObjectByID" resultType="java.util.Map">
+		SELECT GROUPID, OBJID, GROUPNAME, USE_YN, OBJNAME, DEPT 
+		  FROM MAPPINGTABLE
+		 WHERE GROUPID = (SELECT GROUPID FROM MEMBER WHERE ID = #{ id })
+	</select>
 </mapper>

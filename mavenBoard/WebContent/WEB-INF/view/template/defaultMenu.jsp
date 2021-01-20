@@ -10,7 +10,13 @@
 <script type="text/javascript">
 $(function(){
 	var sessionID = sessionStorage.getItem("id");
-	
+	$.ajax({
+		data: {id: sessionID},
+		url: "./getMappingObjectByID.ino",
+		success: function(res){
+			console.log(res);
+		}
+	});
 	
 });
 </script>

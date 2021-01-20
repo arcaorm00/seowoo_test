@@ -1,5 +1,6 @@
 package ino.web.members.service;
 
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -24,6 +25,10 @@ public class MembersService {
 	
 	public Map<String, Object> isExistMember(String id){
 		return sqlSessionTemplate.selectOne("isExistMember", id);
+	}
+	
+	public List<Map<String, Object>> getMappingObjectByID(String id){
+		return sqlSessionTemplate.selectList("getMappingObjectByID", id);
 	}
 
 }
