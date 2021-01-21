@@ -27,8 +27,8 @@ public class MembersService {
 		return sqlSessionTemplate.selectOne("isExistMember", id);
 	}
 	
-	public List<Map<String, Object>> getMappingObjectByID(String id){
-		return sqlSessionTemplate.selectList("getMappingObjectByID", id);
+	public List<Map<String, Object>> getMappingObjectByID(Map<String, Object> map){
+		return sqlSessionTemplate.selectList("getMappingObjectByID", map);
 	}
 
 }

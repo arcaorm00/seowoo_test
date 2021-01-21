@@ -16,8 +16,20 @@
 	</select>
 	
 	<select id="getMappingObjectByID" resultType="java.util.Map">
-		SELECT GROUPID, OBJID, GROUPNAME, USE_YN, OBJNAME, DEPT 
-		  FROM MAPPINGTABLE
-		 WHERE GROUPID = (SELECT GROUPID FROM MEMBER WHERE ID = #{ id })
+		SELECT M.* 
+		  FROM (
+		SELECT GROUPID, OBJID, GROUPNAME, USE_YN, LPAD(' ', 4*(DEPT-1)) || OBJNAME OBJNAME, DEPT, HIGH_OBJ
+		  FROM MAPPINGTABLE 
+		 <choose>
+		 	<when test="!id.equals('')">
+		 		WHERE GROUPID = (SELECT GROUPID FROM MEMBER WHERE ID = #{ id })
+		 	</when>
+		 	<otherwise>
+		 		WHERE GROUPID = 'GROUP200'
+		 	</otherwise>
+		 </choose>
+		 	
+		  ) M
+		  START WITH OBJID = 'OBJ100' CONNECT BY PRIOR OBJID = HIGH_OBJ
 	</select>
 </mapper>

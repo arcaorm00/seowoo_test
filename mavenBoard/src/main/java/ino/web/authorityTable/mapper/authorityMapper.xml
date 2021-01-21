@@ -11,8 +11,9 @@
 	</select>
 	
 	<select id="selectObjectTableList" resultType="java.util.Map">
-		SELECT OBJID, OBJNAME, DEPT, REF, SEQ
-		  FROM OBJECTTABLE ORDER BY REF, SEQ
+		SELECT OBJID, LPAD(' ', 4*(DEPT-1)) || OBJNAME OBJNAME, DEPT, HIGH_OBJ
+		  FROM OBJECTTABLE
+		  START WITH OBJID = 'OBJ100' CONNECT BY PRIOR OBJID = HIGH_OBJ
 	</select>
 	
 	<select id="selectMappingTableListByGroupId" resultType="java.util.Map">
@@ -35,9 +36,9 @@
 	<insert id="insertMappingTable">
 		INSERT ALL
 		<foreach collection="list" item="authority" separator=" ">
-			INTO MAPPINGTABLE (GROUPID, GROUPNAME, USE_YN, OBJID, OBJNAME, DEPT)
+			INTO MAPPINGTABLE (GROUPID, GROUPNAME, USE_YN, OBJID, OBJNAME, DEPT, HIGH_OBJ)
 		  VALUES
-		  (#{ authority.groupId }, #{ authority.groupName }, #{ authority.useYn }, #{ authority.objId }, #{ authority.objName }, #{ authority.dept })
+		  (#{ authority.groupId }, #{ authority.groupName }, #{ authority.useYn }, #{ authority.objId }, #{ authority.objName }, #{ authority.dept }, #{ authority.highObj })
 		</foreach>
 		SELECT * FROM DUAL
 	</insert>

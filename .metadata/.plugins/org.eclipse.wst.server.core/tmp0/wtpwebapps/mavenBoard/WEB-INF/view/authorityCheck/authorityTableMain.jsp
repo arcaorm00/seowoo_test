@@ -150,10 +150,9 @@ function drawTable(groupId){
 				var objName = $("<td style='width: 180px;' align='center' class='objName'>" + objectRow.OBJNAME + "</td>");
 				var dept = $("<td style='width: 100px;' align='center' class='dept'>" + objectRow.DEPT + "</td>");
 				useYn = $("<td style='width: 120px;' align='center' class='useYn'>"+useYn+"</td>");
-				var ref = $("<input type='hidden' class='ref' value='" + objectRow.REF + "'/>")
-				var seq = $("<input type='hidden' class='seq' value='" + objectRow.SEQ + "'/>")
+				var highObj = $("<input type='hidden' class='highObj' value='" + objectRow.HIGH_OBJ + "'/>")
 				
-				li.append(checkBox, objId, objName, dept, useYn, ref, seq);
+				li.append(checkBox, objId, objName, dept, useYn, highObj);
 				$("#authorityTbody").append(li);
 			}
 		}
@@ -171,18 +170,18 @@ $(function(){
 		var deleteList = [];
 		var isRefNodeUnchecked = false;
 		console.log(mappingList);
+		
 		$("input[name=objCheck]").each(function(){
 			var objId = $(this).parents("li").children(".objId").text();
-			var objName = $(this).parents("li").children(".objName").text();
+			var objName = $(this).parents("li").children(".objName").text().trim();
 			var dept = $(this).parents("li").children(".dept").text();
-			var ref = $(this).parents("li").children(".ref").val();
-			var seq = $(this).parents("li").children(".seq").val();
+			var highObj = $(this).parents("li").children(".highObj").val();
 			var isExist = false;
 			var row = {};
 			
-			if (dept > 1){
-				var tempBool = $(".objId:contains('" + ref + "')").prev().children().not(":checked");
-				if (tempBool){
+			if (dept > 1 && $(this).is(":checked")){
+				var tempBool = $(".objId:contains('" + highObj + "')").prev().children().not(":checked");
+				if (tempBool.length > 0){
 					isRefNodeUnchecked = true;
 				}
 			}
@@ -194,7 +193,7 @@ $(function(){
 				}
 			}
 			
-			row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept}
+			row = {groupId: groupId, groupName: groupName, useYn: groupUseYn, objId: objId, objName: objName, dept: dept, highObj: highObj}
 			
 			if($(this).is(":checked") && !isExist){
 				insertList.push(row);

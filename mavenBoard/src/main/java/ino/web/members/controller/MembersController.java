@@ -92,7 +92,9 @@ public class MembersController {
 	@RequestMapping("/getMappingObjectByID.ino")
 	@ResponseBody
 	public List<Map<String, Object>> getMappingObjectByID(HttpServletRequest request, @RequestParam String id){
-		List<Map<String, Object>> mappingList = membersService.getMappingObjectByID(id);
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("id", id);
+		List<Map<String, Object>> mappingList = membersService.getMappingObjectByID(map);
 		return mappingList;
 	}
 	

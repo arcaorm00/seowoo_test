@@ -15,6 +15,14 @@ $(function(){
 		url: "./getMappingObjectByID.ino",
 		success: function(res){
 			console.log(res);
+			for (var i = 0 ; i < res.length ; i++){
+				var menu = res[i];
+				var objName = menu.OBJNAME.replaceAll(" ", "&nbsp;");
+				var li = $("<li></li>");
+				var span = $("<span></span>").html(objName);
+				li.append(span);
+				$("#menuUl").append(li);
+			}
 		}
 	});
 	
@@ -23,11 +31,13 @@ $(function(){
 </head>
 <body>
 	<br><br><br><br>
-	<ul>
+	<ul id="menuUl" align="left">
+	<!-- 
 		<li><a href="./main.ino">메인</a></li>
 		<li><a href="./commonCode.ino">공통코드</a></li>
 		<li>test4</li>
 		<li>test5</li>
+	-->
 	</ul>
 </body>
 </html>

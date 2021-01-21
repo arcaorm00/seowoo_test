@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ino.web.members.mapper">
+
+	<insert id="insertMember">
+		INSERT INTO MEMBER(ID, PASSWORD, NAME, GROUPID) VALUES (#{ id }, #{ password }, #{ name }, #{ groupId })
+	</insert>
+	
+	<select id="isExistMember" resultType="java.util.Map">
+		SELECT ID, PASSWORD, NAME, GROUPID
+		  FROM MEMBER
+		 WHERE ID = #{ id }
+	</select>
+	
+	<select id="getMappingObjectByID" resultType="java.util.Map">
+		SELECT M.* 
+		  FROM (
+		SELECT GROUPID, OBJID, GROUPNAME, USE_YN, LPAD('&nbsp;', 4*(DEPT-1)) || OBJNAME OBJNAME, DEPT, HIGH_OBJ
+		  FROM MAPPINGTABLE 
+		 <choose>
+		 	<when test="!id.equals('')">
+		 		WHERE GROUPID = (SELECT GROUPID FROM MEMBER WHERE ID = #{ id })
+		 	</when>
+		 	<otherwise>
+		 		WHERE GROUPID = 'GROUP200'
+		 	</otherwise>
+		 </choose>
+		 	
+		  ) M
+		  START WITH OBJID = 'OBJ100' CONNECT BY PRIOR OBJID = HIGH_OBJ
+	</select>
+</mapper>
