@@ -24,6 +24,7 @@ $(function(){
 		$("#signupAnchor").show();
 		$("#signinAnchor").show();
 		$("#signoutAnchor").hide();
+		location.reload();
 	});
 });
 </script>

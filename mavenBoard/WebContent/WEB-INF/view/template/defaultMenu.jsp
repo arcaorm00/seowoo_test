@@ -18,9 +18,7 @@ $(function(){
 			for (var i = 0 ; i < res.length ; i++){
 				var menu = res[i];
 				var objName = menu.OBJNAME.replaceAll(" ", "&nbsp;");
-				var li = $("<li></li>");
-				var span = $("<span></span>").html(objName);
-				li.append(span);
+				var li = $("<li></li>").html(objName);
 				$("#menuUl").append(li);
 			}
 		}
